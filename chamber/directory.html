@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sta. Teresa Chamber of Commerce - Directory Page</title>
+    <meta name="description" content="Directory Page for Chamber site for Santa Teresa">
+    <meta name="author" content="Diego Granados">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <meta property="og:title" content="Chamber Site">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://diegog-ux10.github.io/wdd230/chamber/">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1576471721322-443777eed875?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <script defer src="./scripts/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Top Header -->
+        <div class="bg-primary pd-sm flex justify-btw top-header">
+            <div>
+                <a href="">Register</a>
+                <a href="">Login</a>
+            </div>
+            <div id="menu-toggle">
+                <div class="icon active" id="menu-icon">&#9776;</div>
+                <div class="icon" id="close-icon">&#10006;</div>
+            </div>
+        </div>
+        <!-- Bottom Header -->
+        <nav class="pd-sm bottom-header" id="main-nav">
+            <a href="./index.html">
+                <img src="./images/logo.jpg" alt="" width="200" />
+            </a>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./join.html">Apply Membership</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="directory">Business Directory</h2>
+        <div class="view-toggle">
+            <button id="grid-view">🔳Grid View</button>
+            <button id="list-view">📄List View</button>
+        </div>
+        <div id="directory-container" class="grid-view"></div>
+    </main>
+    <footer class="bg-primary pd-sm flex-col">
+        <address>Contact us at 🖂 santateresachamber@example.org | Tel 🖁+1(230)123-5555</address>
+        <span>&copy;<span id="year"></span> Santa Teresa Chamber|<strong> Diego Granados </strong> | WDD 230
+            Project</span>
+        Last Modified: <span id="lastModified"></span>
+    </footer>
+    <script src="scripts/members.js"></script>
+</body>
+</html>
