@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cámara de Comercio de Santa Teresa del Tuy</title>
+  <meta name="description" content="Impulsamos el comercio, la inversión y el desarrollo empresarial del Valle del Tuy desde 1968." />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/image-slot.js"></script>
+</head>
+<body>
+
+  <!-- Utility bar -->
+  <div class="utility">
+    <div class="container">
+      <div class="util-left">
+        <span><span class="live-dot"></span>Sesión abierta</span>
+        <span data-live-date>—</span>
+      </div>
+      <div class="util-right">
+        <span>Av. Bolívar c/c Calle Sucre · Santa Teresa del Tuy</span>
+        <span>+58 (239) 245-1180</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="index.html" aria-label="Inicio">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span class="brand-name">
+            <span class="l1">Cámara de Comercio</span>
+            <span class="l2">Santa Teresa del Tuy · Est. 1968</span>
+          </span>
+        </a>
+        <ul class="nav-links" id="primary-nav">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="discover.html">Descubrir</a></li>
+          <li><a href="directory.html">Directorio</a></li>
+          <li><a href="join.html">Afiliarse</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn btn-ghost btn-sm" href="join.html">Iniciar sesión</a>
+          <a class="btn btn-primary btn-sm" href="join.html#aplicar">Afiliarse <span class="arrow">→</span></a>
+          <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú"><span class="bars"></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Boletín N.º 312 · Mayo 2026</span>
+          <h1 style="margin-top: 28px;">
+            Donde el<br />comercio del<br />
+            <span class="alt">Valle del Tuy</span><br />se encuentra.
+          </h1>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="join.html#aplicar">Solicitar afiliación <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" href="directory.html">Explorar directorio</a>
+          </div>
+          <div class="hero-meta">
+            <div class="stat"><span class="num">387</span><span class="label">Empresas afiliadas</span></div>
+            <div class="stat"><span class="num">58</span><span class="label">Años de gestión</span></div>
+            <div class="stat"><span class="num">14</span><span class="label">Sectores activos</span></div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <span class="badge">Plaza Bolívar · Santa Teresa</span>
+          <image-slot id="hero-photo" placeholder="Vista del centro de Santa Teresa del Tuy" shape="rounded" radius="10"></image-slot>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Comercio</span><span>Industria</span><span>Servicios</span><span>Agroindustria</span><span>Tecnología</span><span>Construcción</span><span>Turismo</span>
+      <span>Comercio</span><span>Industria</span><span>Servicios</span><span>Agroindustria</span><span>Tecnología</span><span>Construcción</span><span>Turismo</span>
+    </div>
+  </div>
+
+  <!-- Today in Santa Teresa: weather + community pulse -->
+  <section class="section tight">
+    <div class="container">
+      <div class="today-grid">
+        <article class="today-card weather">
+          <div class="today-head">
+            <span class="eyebrow no-rule">Hoy en el Tuy</span>
+            <span class="today-time" data-live-clock>—</span>
+          </div>
+          <div class="weather-main">
+            <div class="weather-temp">
+              <span class="num">26°</span>
+              <span class="hi-lo">↑ 29° &nbsp; ↓ 21°</span>
+            </div>
+            <div class="weather-icon" aria-hidden="true">
+              <svg viewBox="0 0 80 80" width="72" height="72">
+                <circle cx="32" cy="32" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="32" y1="10" x2="32" y2="14"/>
+                  <line x1="32" y1="50" x2="32" y2="54"/>
+                  <line x1="10" y1="32" x2="14" y2="32"/>
+                  <line x1="50" y1="32" x2="54" y2="32"/>
+                  <line x1="16" y1="16" x2="19" y2="19"/>
+                  <line x1="45" y1="45" x2="48" y2="48"/>
+                  <line x1="48" y1="16" x2="45" y2="19"/>
+                  <line x1="19" y1="45" x2="16" y2="48"/>
+                </g>
+                <path d="M30 58 q-8 0 -8 6 q0 6 8 6 h24 q8 0 8 -6 q0 -8 -10 -8 q-2 -8 -10 -8 q-10 0 -12 10 z"
+                  fill="var(--bg)" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <p class="weather-desc">Parcialmente nublado · brisa del NE</p>
+          <ul class="weather-strip">
+            <li><span class="lbl">Humedad</span><span class="val">68%</span></li>
+            <li><span class="lbl">Viento</span><span class="val">12 km/h</span></li>
+            <li><span class="lbl">UV</span><span class="val">7 alto</span></li>
+            <li><span class="lbl">Calidad aire</span><span class="val">Buena</span></li>
+          </ul>
+        </article>
+
+        <article class="today-card pulse">
+          <span class="eyebrow no-rule">Pulso comunitario</span>
+          <h3 style="margin-top: 16px;">El comercio del centro abre con normalidad esta semana.</h3>
+          <ul class="pulse-list">
+            <li>
+              <span class="dot" style="background: var(--green);"></span>
+              <div>
+                <strong>Ordenanza vial:</strong> calle Sucre habilitada para carga/descarga 6:00–9:00 AM hasta el 30 de mayo.
+              </div>
+            </li>
+            <li>
+              <span class="dot" style="background: var(--amber);"></span>
+              <div>
+                <strong>Mercado municipal:</strong> nuevos horarios sábado 5:00–14:00.
+              </div>
+            </li>
+            <li>
+              <span class="dot" style="background: var(--ink-faint);"></span>
+              <div>
+                <strong>SENIAT:</strong> declaración mensual ISLR vence el 15 de mayo.
+              </div>
+            </li>
+          </ul>
+          <a class="pulse-link" href="discover.html">Explorar Santa Teresa <span class="arrow">→</span></a>
+        </article>
+
+        <article class="today-card spotlight">
+          <span class="eyebrow no-rule" style="color: var(--amber);">Spotlight del mes</span>
+          <div class="spot-img"><image-slot id="spot-photo" placeholder="Foto del afiliado destacado" shape="rounded" radius="8"></image-slot></div>
+          <div class="spot-body">
+            <div class="spot-cat">Manufactura · Textil</div>
+            <h4 style="font-family: var(--f-display); font-size: 28px; font-weight: 400; margin-top: 4px;">Confecciones del Valle, C.A.</h4>
+            <p class="text-soft" style="font-size: 13px; margin-top: 10px;">Pyme afiliada desde 2011. Este mes inauguraron su tercera planta con 38 nuevos puestos de trabajo.</p>
+            <a class="pulse-link" href="directory.html">Ver perfil <span class="arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission split -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <span class="eyebrow">Quiénes somos</span>
+          <h2 style="margin-top: 24px;">Una red empresarial al servicio del <em class="italic" style="color: var(--green); font-family: inherit;">Tuy Medio</em>.</h2>
+          <p class="lede" style="margin-top: 28px;">Representamos los intereses de comerciantes, industriales y prestadores de servicios de Santa Teresa del Tuy y municipios vecinos. Defendemos un entorno de negocios estable, transparente y competitivo.</p>
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 40px;">
+            <div>
+              <h4>Defensa gremial</h4>
+              <p class="text-soft" style="margin-top: 8px; font-size: 14px;">Voz unificada ante autoridades municipales, regionales y nacionales.</p>
+            </div>
+            <div>
+              <h4>Capacitación</h4>
+              <p class="text-soft" style="margin-top: 8px; font-size: 14px;">Programas continuos de formación y asesoría técnica.</p>
+            </div>
+            <div>
+              <h4>Networking</h4>
+              <p class="text-soft" style="margin-top: 8px; font-size: 14px;">Encuentros mensuales, ruedas de negocio y misiones comerciales.</p>
+            </div>
+            <div>
+              <h4>Inversión</h4>
+              <p class="text-soft" style="margin-top: 8px; font-size: 14px;">Conexiones con financistas, alcaldías y oportunidades regionales.</p>
+            </div>
+          </div>
+          <div style="margin-top: 40px;">
+            <a class="btn btn-ghost" href="discover.html">Descubrir Santa Teresa <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="split-img">
+          <image-slot id="mission-photo" placeholder="Salón de sesiones / asamblea" shape="rounded" radius="10"></image-slot>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section tight">
+    <div class="container">
+      <div class="stats">
+        <div class="stat-cell">
+          <span class="num">387<span class="unit">+</span></span>
+          <span class="desc">Afiliados activos en seis municipios del Tuy.</span>
+        </div>
+        <div class="stat-cell">
+          <span class="num">$ 18<span class="unit">M</span></span>
+          <span class="desc">Movilizados en ruedas de negocio durante 2025.</span>
+        </div>
+        <div class="stat-cell">
+          <span class="num">42</span>
+          <span class="desc">Eventos formativos y de networking al año.</span>
+        </div>
+        <div class="stat-cell">
+          <span class="num">96<span class="unit">%</span></span>
+          <span class="desc">Tasa de renovación de membresía.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured members -->
+  <section class="section bg-cream" style="background: var(--bg-2);">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Empresas afiliadas</span>
+          <h2 style="margin-top: 22px;">Una muestra del directorio.</h2>
+        </div>
+        <div class="right">
+          <a class="btn btn-ghost btn-sm" href="directory.html">Ver todas <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="dir-grid">
+        <article class="dir-card" data-cat="agro">
+          <div class="dir-img"><image-slot id="m1" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Agroindustria</div>
+          <div class="dir-meta">
+            <div class="dir-name">Hacienda La Concordia</div>
+            <span class="dir-id">M-0142</span>
+          </div>
+          <p class="dir-desc">Productores de cacao premium y derivados artesanales para mercado local y exportación.</p>
+          <div class="dir-foot">
+            <span>Desde 2003</span>
+            <a href="#">Perfil →</a>
+          </div>
+        </article>
+
+        <article class="dir-card" data-cat="comercio">
+          <div class="dir-img"><image-slot id="m2" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Comercio</div>
+          <div class="dir-meta">
+            <div class="dir-name">Ferretería El Tuy</div>
+            <span class="dir-id">M-0058</span>
+          </div>
+          <p class="dir-desc">Distribuidor mayorista de materiales de construcción con tres sucursales en el Valle.</p>
+          <div class="dir-foot">
+            <span>Desde 1981</span>
+            <a href="#">Perfil →</a>
+          </div>
+        </article>
+
+        <article class="dir-card" data-cat="servicios">
+          <div class="dir-img"><image-slot id="m3" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Servicios</div>
+          <div class="dir-meta">
+            <div class="dir-name">Bufete Ramírez & Asoc.</div>
+            <span class="dir-id">M-0271</span>
+          </div>
+          <p class="dir-desc">Asesoría legal y tributaria especializada en pymes, inversiones y comercio internacional.</p>
+          <div class="dir-foot">
+            <span>Desde 1996</span>
+            <a href="#">Perfil →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Próximos encuentros</span>
+          <h2 style="margin-top: 22px;">Calendario de eventos.</h2>
+        </div>
+        <div class="right">
+          <a class="btn btn-ghost btn-sm" href="discover.html#eventos">Ver agenda completa <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="events-list">
+        <article class="event-row">
+          <div class="event-date">
+            <span class="month">May</span>
+            <span class="day">22</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="event-body">
+            <div class="event-tags">
+              <span class="tag featured">Destacado</span>
+              <span class="tag">Networking</span>
+            </div>
+            <h3>Foro Empresarial Tuy 2026: hacia una agenda regional de inversión.</h3>
+            <div class="event-meta">
+              <span>● 8:00 – 17:00</span>
+              <span>● Hotel Casa Ávila, Charallave</span>
+              <span>● Cupo limitado · 240 asistentes</span>
+            </div>
+          </div>
+          <span class="event-arrow">→</span>
+        </article>
+
+        <article class="event-row">
+          <div class="event-date">
+            <span class="month">Jun</span>
+            <span class="day">04</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="event-body">
+            <div class="event-tags">
+              <span class="tag">Capacitación</span>
+              <span class="tag">Tributario</span>
+            </div>
+            <h3>Taller práctico: cierre fiscal y obligaciones SENIAT 2026.</h3>
+            <div class="event-meta">
+              <span>● 14:00 – 18:00</span>
+              <span>● Sede de la Cámara</span>
+              <span>● Gratuito para afiliados</span>
+            </div>
+          </div>
+          <span class="event-arrow">→</span>
+        </article>
+
+        <article class="event-row">
+          <div class="event-date">
+            <span class="month">Jun</span>
+            <span class="day">19</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="event-body">
+            <div class="event-tags">
+              <span class="tag">Rueda de negocios</span>
+            </div>
+            <h3>Encuentro proveedor–comprador del sector agroindustrial.</h3>
+            <div class="event-meta">
+              <span>● 9:00 – 13:00</span>
+              <span>● Salón Bolívar, Cámara</span>
+              <span>● 40 cupos · inscripción previa</span>
+            </div>
+          </div>
+          <span class="event-arrow">→</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section bg-cream" style="background: var(--bg-2);">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Noticias y análisis</span>
+          <h2 style="margin-top: 22px;">Lo último del Valle.</h2>
+        </div>
+        <div class="right">
+          <a class="btn btn-ghost btn-sm" href="#">Archivo completo <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-item featured">
+          <div class="news-img"><image-slot id="n1" placeholder="Imagen destacada" shape="rounded" radius="10"></image-slot></div>
+          <span class="news-cat">Análisis · Editorial</span>
+          <h3>El Tuy Medio cierra el primer trimestre con un alza del 7,4% en aperturas comerciales.</h3>
+          <p class="text-soft" style="font-size: 14px; max-width: 50ch;">Más de doscientos nuevos negocios fueron registrados ante las alcaldías de Independencia, Cristóbal Rojas y Tomás Lander en lo que va del año.</p>
+          <div class="news-meta">06 may 2026 · Lectura 6 min</div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-img"><image-slot id="n2" placeholder="Imagen" shape="rounded" radius="10"></image-slot></div>
+          <span class="news-cat">Política pública</span>
+          <h3>Cámara presenta propuesta de ordenanza para zonas comerciales protegidas.</h3>
+          <div class="news-meta">28 abr 2026</div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-img"><image-slot id="n3" placeholder="Imagen" shape="rounded" radius="10"></image-slot></div>
+          <span class="news-cat">Capacitación</span>
+          <h3>Cierra primera cohorte del programa “Pymes Digitales del Tuy” con 84 empresas.</h3>
+          <div class="news-meta">15 abr 2026</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <span class="eyebrow">Membresía 2026 abierta</span>
+          <h2 style="margin-top: 22px;">Su empresa pertenece a algo más grande.</h2>
+          <p class="lede" style="margin-top: 22px;">Únase a la red empresarial más activa del Tuy Medio. Acceso a eventos, asesoría legal, ruedas de negocio y descuentos en servicios afiliados.</p>
+          <div class="actions" style="margin-top: 36px;">
+            <a class="btn btn-amber" href="join.html#aplicar">Comenzar afiliación <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" href="join.html#beneficios">Conocer beneficios</a>
+          </div>
+        </div>
+        <div>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; color: oklch(0.85 0.005 85);">
+            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Afiliación pyme</span><span style="color: var(--bg);">Bs. 320 / mes</span></li>
+            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Afiliación corporativa</span><span style="color: var(--bg);">Bs. 880 / mes</span></li>
+            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Cuota anual emprendedor</span><span style="color: var(--bg);">Bs. 1.200 / año</span></li>
+            <li style="display: flex; justify-content: space-between;"><span>Voto en asamblea</span><span style="color: var(--amber);">Incluido</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true">C</span>
+            <span class="brand-name">
+              <span class="l1">Cámara de Comercio</span>
+              <span class="l2">Santa Teresa del Tuy · Est. 1968</span>
+            </span>
+          </div>
+          <p>Asociación civil sin fines de lucro al servicio del comercio, la industria y los servicios del Valle del Tuy.</p>
+          <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Suscrito ✓';">
+            <input type="email" placeholder="Su correo electrónico" required />
+            <button type="submit">Suscribir</button>
+          </form>
+        </div>
+        <div>
+          <h5>Cámara</h5>
+          <ul>
+            <li><a href="discover.html">Descubrir</a></li>
+            <li><a href="discover.html#historia">Historia</a></li>
+            <li><a href="discover.html#demografia">Demografía</a></li>
+            <li><a href="discover.html#eventos">Eventos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Recursos</h5>
+          <ul>
+            <li><a href="directory.html">Directorio</a></li>
+            <li><a href="join.html">Afiliarse</a></li>
+            <li><a href="#">Boletín mensual</a></li>
+            <li><a href="#">Asesoría legal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contacto</h5>
+          <ul>
+            <li>Av. Bolívar c/c Calle Sucre</li>
+            <li>Santa Teresa del Tuy 1209</li>
+            <li>Estado Miranda, Venezuela</li>
+            <li><a href="mailto:info@camarastt.org.ve">info@camarastt.org.ve</a></li>
+            <li>+58 (239) 245-1180</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 1968–2026 Cámara de Comercio de Santa Teresa del Tuy. RIF J-00214567-3.</span>
+        <div class="legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Transparencia</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

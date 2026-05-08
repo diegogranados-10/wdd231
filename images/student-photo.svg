@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Student portrait placeholder">
+  <defs>
+    <pattern id="stripes" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#e7e4dc"></rect>
+      <rect width="7" height="14" fill="#dcd8cf"></rect>
+    </pattern>
+  </defs>
+  <rect width="600" height="600" fill="url(#stripes)"></rect>
+  <g fill="#0e6e6e" opacity="0.85">
+    <circle cx="300" cy="240" r="90"></circle>
+    <path d="M150 520 C 150 410, 230 360, 300 360 C 370 360, 450 410, 450 520 Z"></path>
+  </g>
+  <text x="300" y="565" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="22" fill="#1a1a1a" opacity="0.55">[ student photo ]</text>
+</svg>

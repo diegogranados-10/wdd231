@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directorio — Cámara de Comercio de Santa Teresa del Tuy</title>
+  <meta name="description" content="Directorio público de empresas y organizaciones afiliadas a la Cámara de Comercio de Santa Teresa del Tuy." />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/image-slot.js"></script>
+  <style>
+    /* Directory page extras */
+    .directory-toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 32px;
+      position: sticky;
+      top: 76px;
+      z-index: 10;
+      background: oklch(0.972 0.008 85 / 0.95);
+      backdrop-filter: blur(10px);
+    }
+    .search-field {
+      position: relative;
+      max-width: 480px;
+    }
+    .search-field input {
+      width: 100%;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 14px 18px 14px 46px;
+      font: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s var(--ease);
+    }
+    .search-field input:focus { border-color: var(--green); }
+    .search-field svg {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--ink-faint);
+    }
+    .toolbar-meta {
+      font-family: var(--f-mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .toolbar-meta strong { color: var(--ink); font-weight: 500; }
+    @media (max-width: 880px) {
+      .directory-toolbar { grid-template-columns: 1fr; gap: 14px; position: static; }
+    }
+
+    .filters-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    /* override grid to 4 columns for full directory */
+    .dir-grid.full { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 1180px) { .dir-grid.full { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 880px)  { .dir-grid.full { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px)  { .dir-grid.full { grid-template-columns: 1fr; } }
+
+    /* tier badge on cards */
+    .dir-tier {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-family: var(--f-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--bg);
+      color: var(--ink);
+      border: 1px solid var(--rule);
+      z-index: 2;
+    }
+    .dir-tier.gold   { background: var(--ink); color: var(--amber); border-color: var(--ink); }
+    .dir-tier.silver { background: var(--bg-2); color: var(--ink-soft); }
+    .dir-tier.np     { background: oklch(0.94 0.02 145); color: var(--green-ink); }
+  </style>
+</head>
+<body>
+
+  <!-- Utility bar -->
+  <div class="utility">
+    <div class="container">
+      <div class="util-left">
+        <span><span class="live-dot"></span>Sesión abierta</span>
+        <span data-live-date>—</span>
+      </div>
+      <div class="util-right">
+        <span>Av. Bolívar c/c Calle Sucre · Santa Teresa del Tuy</span>
+        <span>+58 (239) 245-1180</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="index.html" aria-label="Inicio">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span class="brand-name">
+            <span class="l1">Cámara de Comercio</span>
+            <span class="l2">Santa Teresa del Tuy · Est. 1968</span>
+          </span>
+        </a>
+        <ul class="nav-links" id="primary-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="discover.html">Descubrir</a></li>
+          <li><a href="directory.html" class="active">Directorio</a></li>
+          <li><a href="join.html">Afiliarse</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn btn-ghost btn-sm" href="join.html">Iniciar sesión</a>
+          <a class="btn btn-primary btn-sm" href="join.html#aplicar">Afiliarse <span class="arrow">→</span></a>
+          <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú"><span class="bars"></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumb">
+        <a href="index.html">Inicio</a> <span>/</span> <span>Directorio</span>
+      </div>
+      <div class="page-hero-grid">
+        <div>
+          <span class="eyebrow">Empresas y organizaciones afiliadas</span>
+          <h1 style="margin-top: 22px;">Directorio del<br /><em class="italic" style="color: var(--green); font-family: inherit;">Tuy Medio.</em></h1>
+        </div>
+        <div>
+          <p class="lede">387 empresas, 14 sectores, una sola red. Filtre por categoría o busque por nombre, ubicación o palabra clave.</p>
+          <div style="display: flex; gap: 18px; margin-top: 28px; flex-wrap: wrap; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--ink-faint);">
+            <span><span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--ink); margin-right: 6px; vertical-align: middle;"></span>Gold</span>
+            <span><span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--bg-3); border: 1px solid var(--rule); margin-right: 6px; vertical-align: middle;"></span>Silver</span>
+            <span><span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: oklch(0.85 0.06 145); margin-right: 6px; vertical-align: middle;"></span>Sin fines de lucro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toolbar -->
+  <section class="section tight" style="padding-block: 0;">
+    <div class="container">
+      <div class="directory-toolbar">
+        <div class="search-field">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="11" cy="11" r="7"/>
+            <line x1="21" y1="21" x2="16.5" y2="16.5"/>
+          </svg>
+          <input type="search" placeholder="Buscar por nombre, sector o palabra clave…" data-search />
+        </div>
+        <span class="toolbar-meta"><strong>24</strong> resultados · ordenado por relevancia</span>
+      </div>
+
+      <div class="filters-row">
+        <button class="chip active" data-filter="all">Todos · 387</button>
+        <button class="chip" data-filter="comercio">Comercio · 142</button>
+        <button class="chip" data-filter="servicios">Servicios · 88</button>
+        <button class="chip" data-filter="manufactura">Manufactura · 54</button>
+        <button class="chip" data-filter="agro">Agroindustria</button>
+        <button class="chip" data-filter="construccion">Construcción</button>
+        <button class="chip" data-filter="tecnologia">Tecnología</button>
+        <button class="chip" data-filter="turismo">Turismo y gastronomía</button>
+        <button class="chip" data-filter="np">Sin fines de lucro</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Directory grid -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="dir-grid full">
+
+        <article class="dir-card" data-cat="agro">
+          <span class="dir-tier gold">Gold</span>
+          <div class="dir-img"><image-slot id="d1" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Agroindustria · Cacao</div>
+          <div class="dir-meta">
+            <div class="dir-name">Hacienda La Concordia</div>
+            <span class="dir-id">M-0142</span>
+          </div>
+          <p class="dir-desc">Productores de cacao premium y derivados artesanales para mercado local y exportación.</p>
+          <div class="dir-foot"><span>Desde 2003</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="comercio">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d2" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Comercio · Construcción</div>
+          <div class="dir-meta">
+            <div class="dir-name">Ferretería El Tuy</div>
+            <span class="dir-id">M-0058</span>
+          </div>
+          <p class="dir-desc">Distribuidor mayorista de materiales de construcción con tres sucursales en el Valle.</p>
+          <div class="dir-foot"><span>Desde 1981</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="servicios">
+          <span class="dir-tier gold">Gold</span>
+          <div class="dir-img"><image-slot id="d3" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Servicios · Legal</div>
+          <div class="dir-meta">
+            <div class="dir-name">Bufete Ramírez & Asoc.</div>
+            <span class="dir-id">M-0271</span>
+          </div>
+          <p class="dir-desc">Asesoría legal y tributaria especializada en pymes, inversiones y comercio internacional.</p>
+          <div class="dir-foot"><span>Desde 1996</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="manufactura">
+          <span class="dir-tier gold">Gold</span>
+          <div class="dir-img"><image-slot id="d4" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Manufactura · Textil</div>
+          <div class="dir-meta">
+            <div class="dir-name">Confecciones del Valle, C.A.</div>
+            <span class="dir-id">M-0089</span>
+          </div>
+          <p class="dir-desc">Fábrica textil con tres plantas activas. Confección por encargo y línea propia para cadenas regionales.</p>
+          <div class="dir-foot"><span>Desde 2011</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="turismo">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d5" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Turismo · Gastronomía</div>
+          <div class="dir-meta">
+            <div class="dir-name">Restaurante La Cumbre</div>
+            <span class="dir-id">M-0303</span>
+          </div>
+          <p class="dir-desc">Cocina venezolana contemporánea con vista al valle. Salón para 80 comensales y servicio de eventos.</p>
+          <div class="dir-foot"><span>Desde 2014</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="construccion">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d6" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Construcción</div>
+          <div class="dir-meta">
+            <div class="dir-name">Constructora Aragüita 21</div>
+            <span class="dir-id">M-0177</span>
+          </div>
+          <p class="dir-desc">Obras civiles, vialidad y vivienda. Especialistas en proyectos del corredor Caracas–Tuy.</p>
+          <div class="dir-foot"><span>Desde 2007</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="tecnologia">
+          <span class="dir-tier gold">Gold</span>
+          <div class="dir-img"><image-slot id="d7" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Tecnología · Software</div>
+          <div class="dir-meta">
+            <div class="dir-name">Codium Tuy Lab</div>
+            <span class="dir-id">M-0356</span>
+          </div>
+          <p class="dir-desc">Estudio de software para pymes: e-commerce, automatización contable e inteligencia comercial.</p>
+          <div class="dir-foot"><span>Desde 2019</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="np">
+          <span class="dir-tier np">Sin fines de lucro</span>
+          <div class="dir-img"><image-slot id="d8" placeholder="Logo" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Educación · ONG</div>
+          <div class="dir-meta">
+            <div class="dir-name">Fundación Aprender Tuy</div>
+            <span class="dir-id">M-0099</span>
+          </div>
+          <p class="dir-desc">Becas y programas de alfabetización digital para jóvenes de cinco municipios del Valle.</p>
+          <div class="dir-foot"><span>Desde 2009</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="comercio">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d9" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Comercio · Farmacia</div>
+          <div class="dir-meta">
+            <div class="dir-name">Farmatuy</div>
+            <span class="dir-id">M-0115</span>
+          </div>
+          <p class="dir-desc">Cadena de farmacias con cinco sucursales en el municipio Independencia.</p>
+          <div class="dir-foot"><span>Desde 1992</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="servicios">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d10" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Servicios · Logística</div>
+          <div class="dir-meta">
+            <div class="dir-name">Transporte Andes del Tuy</div>
+            <span class="dir-id">M-0220</span>
+          </div>
+          <p class="dir-desc">Transporte de carga seca y refrigerada. Cobertura nacional, base operativa en Charallave.</p>
+          <div class="dir-foot"><span>Desde 2005</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="agro">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d11" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Agroindustria · Café</div>
+          <div class="dir-meta">
+            <div class="dir-name">Café Las Adjuntas</div>
+            <span class="dir-id">M-0264</span>
+          </div>
+          <p class="dir-desc">Tostadora artesanal y distribuidora de café de origen venezolano. Tienda en plaza Bolívar.</p>
+          <div class="dir-foot"><span>Desde 2012</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="manufactura">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d12" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Manufactura · Alimentos</div>
+          <div class="dir-meta">
+            <div class="dir-name">Panadería Industrial Sucre</div>
+            <span class="dir-id">M-0073</span>
+          </div>
+          <p class="dir-desc">Producción de pan y bollería para abastos, supermercados y franquicias regionales.</p>
+          <div class="dir-foot"><span>Desde 1989</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="servicios">
+          <span class="dir-tier gold">Gold</span>
+          <div class="dir-img"><image-slot id="d13" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Servicios · Contables</div>
+          <div class="dir-meta">
+            <div class="dir-name">Contadores Asociados Tuy</div>
+            <span class="dir-id">M-0188</span>
+          </div>
+          <p class="dir-desc">Contabilidad, auditoría y tributos. Equipo de 18 profesionales acreditados ante el SENIAT.</p>
+          <div class="dir-foot"><span>Desde 1998</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="turismo">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d14" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Turismo · Hospedaje</div>
+          <div class="dir-meta">
+            <div class="dir-name">Posada Hacienda Aguasal</div>
+            <span class="dir-id">M-0312</span>
+          </div>
+          <p class="dir-desc">Hospedaje rural y experiencias agroturísticas en una hacienda cacaotera de tradición.</p>
+          <div class="dir-foot"><span>Desde 2016</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="np">
+          <span class="dir-tier np">Sin fines de lucro</span>
+          <div class="dir-img"><image-slot id="d15" placeholder="Logo" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Salud · ONG</div>
+          <div class="dir-meta">
+            <div class="dir-name">Hogar Clínico San Vicente</div>
+            <span class="dir-id">M-0044</span>
+          </div>
+          <p class="dir-desc">Atención médica primaria gratuita a familias de bajos recursos. Más de 1.200 consultas al mes.</p>
+          <div class="dir-foot"><span>Desde 1976</span><a href="#">Perfil →</a></div>
+        </article>
+
+        <article class="dir-card" data-cat="construccion">
+          <span class="dir-tier silver">Silver</span>
+          <div class="dir-img"><image-slot id="d16" placeholder="Logo / fachada" shape="rounded" radius="4"></image-slot></div>
+          <div class="dir-cat">Construcción · Suministros</div>
+          <div class="dir-meta">
+            <div class="dir-name">Concretos del Valle</div>
+            <span class="dir-id">M-0156</span>
+          </div>
+          <p class="dir-desc">Planta de concreto premezclado y prefabricados con servicio bajo demanda en todo el Tuy.</p>
+          <div class="dir-foot"><span>Desde 2008</span><a href="#">Perfil →</a></div>
+        </article>
+
+      </div>
+
+      <div style="display: flex; justify-content: center; margin-top: 56px;">
+        <a class="btn btn-ghost" href="#">Cargar más afiliados <span class="arrow">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section tight">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <span class="eyebrow">¿Su empresa aún no aparece?</span>
+          <h2 style="margin-top: 22px;">Súmese al directorio del Tuy.</h2>
+          <p class="lede" style="margin-top: 22px;">El directorio público es uno de los beneficios más visibles de afiliarse. Listing, perfil completo y enlaces a su sitio y redes.</p>
+          <div class="actions" style="margin-top: 36px;">
+            <a class="btn btn-amber" href="join.html#aplicar">Solicitar afiliación <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" href="join.html#beneficios">Comparar beneficios</a>
+          </div>
+        </div>
+        <div>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; color: oklch(0.85 0.005 85);">
+            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Listing básico (Silver)</span><span style="color: var(--bg);">Incluido</span></li>
+            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Perfil ampliado (Gold)</span><span style="color: var(--bg);">Incluido</span></li>
+            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Spotlight mensual</span><span style="color: var(--bg);">Sólo Gold</span></li>
+            <li style="display: flex; justify-content: space-between;"><span>Tarifa especial ONG</span><span style="color: var(--amber);">−40%</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true">C</span>
+            <span class="brand-name">
+              <span class="l1">Cámara de Comercio</span>
+              <span class="l2">Santa Teresa del Tuy · Est. 1968</span>
+            </span>
+          </div>
+          <p>Asociación civil sin fines de lucro al servicio del comercio, la industria y los servicios del Valle del Tuy.</p>
+          <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Suscrito ✓';">
+            <input type="email" placeholder="Su correo electrónico" required />
+            <button type="submit">Suscribir</button>
+          </form>
+        </div>
+        <div>
+          <h5>Cámara</h5>
+          <ul>
+            <li><a href="discover.html">Descubrir</a></li>
+            <li><a href="discover.html#historia">Historia</a></li>
+            <li><a href="discover.html#demografia">Demografía</a></li>
+            <li><a href="discover.html#eventos">Eventos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Recursos</h5>
+          <ul>
+            <li><a href="directory.html">Directorio</a></li>
+            <li><a href="join.html">Afiliarse</a></li>
+            <li><a href="#">Boletín mensual</a></li>
+            <li><a href="#">Asesoría legal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contacto</h5>
+          <ul>
+            <li>Av. Bolívar c/c Calle Sucre</li>
+            <li>Santa Teresa del Tuy 1209</li>
+            <li>Estado Miranda, Venezuela</li>
+            <li><a href="mailto:info@camarastt.org.ve">info@camarastt.org.ve</a></li>
+            <li>+58 (239) 245-1180</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 1968–2026 Cámara de Comercio de Santa Teresa del Tuy. RIF J-00214567-3.</span>
+        <div class="legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Transparencia</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
