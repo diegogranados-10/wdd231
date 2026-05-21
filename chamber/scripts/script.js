@@ -84,4 +84,16 @@
       }, 700);
     });
   }
+
+  // Copyright year
+  const yearEl = document.getElementById('copyright-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Last modification date
+  const modEl = document.getElementById('last-modified');
+  if (modEl) {
+    modEl.textContent = document.lastModified;
+  }
 })();

@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cámara de Comercio de Santa Teresa del Tuy</title>
   <meta name="description" content="Impulsamos el comercio, la inversión y el desarrollo empresarial del Valle del Tuy desde 1968." />
-  <link rel="stylesheet" href="styles/styles.css" />
+  <meta name="author" content="Diego Granados" />
+  <meta property="og:title" content="Cámara de Comercio de Santa Teresa del Tuy" />
+  <meta property="og:description" content="Impulsamos el comercio, la inversión y el desarrollo empresarial del Valle del Tuy desde 1968." />
+  <meta property="og:image" content="images/social-home.webp" />
+  <meta property="og:url" content="https://diegogranados.github.io/wdd231/chamber/index.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
   <script src="scripts/image-slot.js"></script>
 </head>
 <body>
@@ -56,7 +64,7 @@
       <div class="hero-grid">
         <div>
           <span class="eyebrow">Boletín N.º 312 · Mayo 2026</span>
-          <h1 style="margin-top: 28px;">
+          <h1 class="hero-title-mt">
             Donde el<br />comercio del<br />
             <span class="alt">Valle del Tuy</span><br />se encuentra.
           </h1>
@@ -129,22 +137,22 @@
 
         <article class="today-card pulse">
           <span class="eyebrow no-rule">Pulso comunitario</span>
-          <h3 style="margin-top: 16px;">El comercio del centro abre con normalidad esta semana.</h3>
+          <h3 class="pulse-title">El comercio del centro abre con normalidad esta semana.</h3>
           <ul class="pulse-list">
             <li>
-              <span class="dot" style="background: var(--green);"></span>
+              <span class="dot pulse-dot-green"></span>
               <div>
                 <strong>Ordenanza vial:</strong> calle Sucre habilitada para carga/descarga 6:00–9:00 AM hasta el 30 de mayo.
               </div>
             </li>
             <li>
-              <span class="dot" style="background: var(--amber);"></span>
+              <span class="dot pulse-dot-amber"></span>
               <div>
                 <strong>Mercado municipal:</strong> nuevos horarios sábado 5:00–14:00.
               </div>
             </li>
             <li>
-              <span class="dot" style="background: var(--ink-faint);"></span>
+              <span class="dot pulse-dot-faint"></span>
               <div>
                 <strong>SENIAT:</strong> declaración mensual ISLR vence el 15 de mayo.
               </div>
@@ -154,12 +162,12 @@
         </article>
 
         <article class="today-card spotlight">
-          <span class="eyebrow no-rule" style="color: var(--amber);">Spotlight del mes</span>
+          <span class="eyebrow no-rule spot-eyebrow-amber">Spotlight del mes</span>
           <div class="spot-img"><image-slot id="spot-photo" placeholder="Foto del afiliado destacado" shape="rounded" radius="8"></image-slot></div>
           <div class="spot-body">
             <div class="spot-cat">Manufactura · Textil</div>
-            <h4 style="font-family: var(--f-display); font-size: 28px; font-weight: 400; margin-top: 4px;">Confecciones del Valle, C.A.</h4>
-            <p class="text-soft" style="font-size: 13px; margin-top: 10px;">Pyme afiliada desde 2011. Este mes inauguraron su tercera planta con 38 nuevos puestos de trabajo.</p>
+            <h4 class="spot-title">Confecciones del Valle, C.A.</h4>
+            <p class="text-soft spot-desc">Pyme afiliada desde 2011. Este mes inauguraron su tercera planta con 38 nuevos puestos de trabajo.</p>
             <a class="pulse-link" href="directory.html">Ver perfil <span class="arrow">→</span></a>
           </div>
         </article>
@@ -173,27 +181,27 @@
       <div class="split">
         <div>
           <span class="eyebrow">Quiénes somos</span>
-          <h2 style="margin-top: 24px;">Una red empresarial al servicio del <em class="italic" style="color: var(--green); font-family: inherit;">Tuy Medio</em>.</h2>
-          <p class="lede" style="margin-top: 28px;">Representamos los intereses de comerciantes, industriales y prestadores de servicios de Santa Teresa del Tuy y municipios vecinos. Defendemos un entorno de negocios estable, transparente y competitivo.</p>
-          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 40px;">
+          <h2 class="mission-title">Una red empresarial al servicio del <em class="italic-green">Tuy Medio</em>.</h2>
+          <p class="lede mission-lede">Representamos los intereses de comerciantes, industriales y prestadores de servicios de Santa Teresa del Tuy y municipios vecinos. Defendemos un entorno de negocios estable, transparente y competitivo.</p>
+          <div class="grid mission-grid">
             <div>
               <h4>Defensa gremial</h4>
-              <p class="text-soft" style="margin-top: 8px; font-size: 14px;">Voz unificada ante autoridades municipales, regionales y nacionales.</p>
+              <p class="text-soft mission-desc">Voz unificada ante autoridades municipales, regionales y nacionales.</p>
             </div>
             <div>
               <h4>Capacitación</h4>
-              <p class="text-soft" style="margin-top: 8px; font-size: 14px;">Programas continuos de formación y asesoría técnica.</p>
+              <p class="text-soft mission-desc">Programas continuos de formación y asesoría técnica.</p>
             </div>
             <div>
               <h4>Networking</h4>
-              <p class="text-soft" style="margin-top: 8px; font-size: 14px;">Encuentros mensuales, ruedas de negocio y misiones comerciales.</p>
+              <p class="text-soft mission-desc">Encuentros mensuales, ruedas de negocio y misiones comerciales.</p>
             </div>
             <div>
               <h4>Inversión</h4>
-              <p class="text-soft" style="margin-top: 8px; font-size: 14px;">Conexiones con financistas, alcaldías y oportunidades regionales.</p>
+              <p class="text-soft mission-desc">Conexiones con financistas, alcaldías y oportunidades regionales.</p>
             </div>
           </div>
-          <div style="margin-top: 40px;">
+          <div class="mission-cta">
             <a class="btn btn-ghost" href="discover.html">Descubrir Santa Teresa <span class="arrow">→</span></a>
           </div>
         </div>
@@ -229,12 +237,12 @@
   </section>
 
   <!-- Featured members -->
-  <section class="section bg-cream" style="background: var(--bg-2);">
+  <section class="section bg-cream">
     <div class="container">
       <div class="sec-head">
         <div>
           <span class="eyebrow">Empresas afiliadas</span>
-          <h2 style="margin-top: 22px;">Una muestra del directorio.</h2>
+          <h2 class="section-title-mt">Una muestra del directorio.</h2>
         </div>
         <div class="right">
           <a class="btn btn-ghost btn-sm" href="directory.html">Ver todas <span class="arrow">→</span></a>
@@ -293,7 +301,7 @@
       <div class="sec-head">
         <div>
           <span class="eyebrow">Próximos encuentros</span>
-          <h2 style="margin-top: 22px;">Calendario de eventos.</h2>
+          <h2 class="section-title-mt">Calendario de eventos.</h2>
         </div>
         <div class="right">
           <a class="btn btn-ghost btn-sm" href="discover.html#eventos">Ver agenda completa <span class="arrow">→</span></a>
@@ -367,12 +375,12 @@
   </section>
 
   <!-- News -->
-  <section class="section bg-cream" style="background: var(--bg-2);">
+  <section class="section bg-cream">
     <div class="container">
       <div class="sec-head">
         <div>
           <span class="eyebrow">Noticias y análisis</span>
-          <h2 style="margin-top: 22px;">Lo último del Valle.</h2>
+          <h2 class="section-title-mt">Lo último del Valle.</h2>
         </div>
         <div class="right">
           <a class="btn btn-ghost btn-sm" href="#">Archivo completo <span class="arrow">→</span></a>
@@ -384,7 +392,7 @@
           <div class="news-img"><image-slot id="n1" placeholder="Imagen destacada" shape="rounded" radius="10"></image-slot></div>
           <span class="news-cat">Análisis · Editorial</span>
           <h3>El Tuy Medio cierra el primer trimestre con un alza del 7,4% en aperturas comerciales.</h3>
-          <p class="text-soft" style="font-size: 14px; max-width: 50ch;">Más de doscientos nuevos negocios fueron registrados ante las alcaldías de Independencia, Cristóbal Rojas y Tomás Lander en lo que va del año.</p>
+          <p class="text-soft news-desc">Más de doscientos nuevos negocios fueron registrados ante las alcaldías de Independencia, Cristóbal Rojas y Tomás Lander en lo que va del año.</p>
           <div class="news-meta">06 may 2026 · Lectura 6 min</div>
         </article>
 
@@ -411,19 +419,19 @@
       <div class="cta-band">
         <div>
           <span class="eyebrow">Membresía 2026 abierta</span>
-          <h2 style="margin-top: 22px;">Su empresa pertenece a algo más grande.</h2>
-          <p class="lede" style="margin-top: 22px;">Únase a la red empresarial más activa del Tuy Medio. Acceso a eventos, asesoría legal, ruedas de negocio y descuentos en servicios afiliados.</p>
-          <div class="actions" style="margin-top: 36px;">
+          <h2 class="section-title-mt">Su empresa pertenece a algo más grande.</h2>
+          <p class="lede section-lede-mt">Únase a la red empresarial más activa del Tuy Medio. Acceso a eventos, asesoría legal, ruedas de negocio y descuentos en servicios afiliados.</p>
+          <div class="actions section-actions-mt">
             <a class="btn btn-amber" href="join.html#aplicar">Comenzar afiliación <span class="arrow">→</span></a>
             <a class="btn btn-ghost" href="join.html#beneficios">Conocer beneficios</a>
           </div>
         </div>
         <div>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; color: oklch(0.85 0.005 85);">
-            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Afiliación pyme</span><span style="color: var(--bg);">Bs. 320 / mes</span></li>
-            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Afiliación corporativa</span><span style="color: var(--bg);">Bs. 880 / mes</span></li>
-            <li style="display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid oklch(0.32 0.01 85);"><span>Cuota anual emprendedor</span><span style="color: var(--bg);">Bs. 1.200 / año</span></li>
-            <li style="display: flex; justify-content: space-between;"><span>Voto en asamblea</span><span style="color: var(--amber);">Incluido</span></li>
+          <ul class="cta-list">
+            <li><span>Afiliación pyme</span><span class="val">Bs. 320 / mes</span></li>
+            <li><span>Afiliación corporativa</span><span class="val">Bs. 880 / mes</span></li>
+            <li><span>Cuota anual emprendedor</span><span class="val">Bs. 1.200 / año</span></li>
+            <li><span>Voto en asamblea</span><span class="val-amber">Incluido</span></li>
           </ul>
         </div>
       </div>
@@ -478,12 +486,15 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 1968–2026 Cámara de Comercio de Santa Teresa del Tuy. RIF J-00214567-3.</span>
+        <span>&copy; 1968–<span id="copyright-year"></span> Cámara de Comercio de Santa Teresa del Tuy. RIF J-00214567-3.</span>
         <div class="legal">
           <a href="#">Privacidad</a>
           <a href="#">Términos</a>
           <a href="#">Transparencia</a>
         </div>
+      </div>
+      <div class="footer-dev">
+        Diego Granados | WDD 231 | Última modificación: <span id="last-modified"></span>
       </div>
     </div>
   </footer>

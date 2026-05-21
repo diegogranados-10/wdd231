@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Hacienda La Concordia",
+    "address": "Carretera Nacional Santa Teresa, Km 12, Sector La Concordia",
+    "phone": "+58 (239) 245-3021",
+    "website": "https://haciendaconcordia.com.ve",
+    "image": "hacienda-concordia.webp",
+    "membership": 3,
+    "category": "Agroindustria",
+    "description": "Productores de cacao premium y derivados artesanales para mercado local y exportacion."
+  },
+  {
+    "name": "Ferreteria El Tuy",
+    "address": "Av. Bolivar, Centro Comercial El Valle, Local 12",
+    "phone": "+58 (239) 245-0058",
+    "website": "https://ferreteriaeltuy.com",
+    "image": "ferreteria-tuy.webp",
+    "membership": 2,
+    "category": "Comercio",
+    "description": "Distribuidor mayorista de materiales de construccion con tres sucursales en el Valle."
+  },
+  {
+    "name": "Bufete Ramirez & Asociados",
+    "address": "Calle Sucre, Edificio Miranda, Piso 3, Oficina 3-A",
+    "phone": "+58 (239) 245-2710",
+    "website": "https://bufeteramirez.com.ve",
+    "image": "bufete-ramirez.webp",
+    "membership": 3,
+    "category": "Servicios",
+    "description": "Asesoria legal y tributaria especializada en pymes, inversiones y comercio internacional."
+  },
+  {
+    "name": "Confecciones del Valle, C.A.",
+    "address": "Zona Industrial Las Brisas, Galpon 7",
+    "phone": "+58 (239) 245-0890",
+    "website": "https://confeccionesdelvalle.com",
+    "image": "confecciones-valle.webp",
+    "membership": 3,
+    "category": "Manufactura",
+    "description": "Fabrica textil con tres plantas activas. Confeccion por encargo y linea propia para cadenas regionales."
+  },
+  {
+    "name": "Restaurante La Cumbre",
+    "address": "Calle El Mirador, Sector Los Cerritos, Santa Teresa del Tuy",
+    "phone": "+58 (239) 245-3030",
+    "website": "https://restaurantelacumbre.com",
+    "image": "restaurante-cumbre.webp",
+    "membership": 2,
+    "category": "Turismo",
+    "description": "Cocina venezolana contemporanea con vista al valle. Salon para 80 comensales y servicio de eventos."
+  },
+  {
+    "name": "Codium Tuy Lab",
+    "address": "Centro Empresarial Tuy, Torre A, Piso 2, Oficina 2-C",
+    "phone": "+58 (412) 356-7890",
+    "website": "https://codiumtuylab.com",
+    "image": "codium-tuy.webp",
+    "membership": 3,
+    "category": "Tecnologia",
+    "description": "Estudio de software para pymes: e-commerce, automatizacion contable e inteligencia comercial."
+  },
+  {
+    "name": "Fundacion Aprender Tuy",
+    "address": "Calle Bolivar, Casa N.o 14, Santa Teresa del Tuy",
+    "phone": "+58 (239) 245-0099",
+    "website": "https://aprendertuy.org",
+    "image": "fundacion-aprender.webp",
+    "membership": 1,
+    "category": "Educacion",
+    "description": "Becas y programas de alfabetizacion digital para jovenes de cinco municipios del Valle."
+  },
+  {
+    "name": "Farmatuy",
+    "address": "Av. Principal de Santa Teresa, C.C. Plaza Tuy, Local PB-3",
+    "phone": "+58 (239) 245-1150",
+    "website": "https://farmatuy.com.ve",
+    "image": "farmatuy.webp",
+    "membership": 2,
+    "category": "Comercio",
+    "description": "Cadena de farmacias con cinco sucursales en el municipio Independencia."
+  }
+]
