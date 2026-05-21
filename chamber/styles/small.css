@@ -818,7 +818,7 @@ p { margin: 0; text-wrap: pretty; }
   padding-bottom: 64px;
   border-bottom: 1px solid oklch(0.32 0.01 85);
 }
-.footer-grid h5 {
+.footer-grid h4 {
   font-family: var(--f-mono);
   font-size: 11px;
   letter-spacing: 0.16em;

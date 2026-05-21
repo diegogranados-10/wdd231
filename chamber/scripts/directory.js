@@ -6,7 +6,7 @@
 
   if (!grid) return;
 
-  const membershipLabel = { 1: 'Miembro', 2: 'Silver', 3: 'Gold' };
+  const membershipLabel = { 1: 'Member', 2: 'Silver', 3: 'Gold' };
   const membershipClass = { 1: 'np', 2: 'silver', 3: 'gold' };
 
   function renderCard(m) {
@@ -27,7 +27,7 @@
         <span>${m.phone}</span>
       </div>
       <div class="dir-foot">
-        <a href="${m.website}" target="_blank" rel="noopener">Sitio web</a>
+        <a href="${m.website}" target="_blank" rel="noopener">Website</a>
       </div>
     </article>`;
   }
@@ -44,7 +44,7 @@
       </div>
       <div class="dir-list-contact">
         <span>${m.phone}</span>
-        <a href="${m.website}" target="_blank" rel="noopener">Sitio web</a>
+        <a href="${m.website}" target="_blank" rel="noopener">Website</a>
       </div>
     </article>`;
   }
@@ -69,7 +69,7 @@
       members = await response.json();
       display();
     } catch (err) {
-      grid.innerHTML = '<p class="text-soft">No se pudieron cargar los miembros del directorio.</p>';
+      grid.innerHTML = '<p class="text-soft">Could not load directory members.</p>';
     }
   }
 

@@ -1,4 +1,4 @@
-// Cámara de Comercio de Santa Teresa del Tuy — Shared site script
+// Chamber of Commerce of Santa Teresa del Tuy — Shared site script
 (function () {
   // Mobile nav
   const toggle = document.querySelector('.nav-toggle');
@@ -14,7 +14,7 @@
   // Live date in utility bar
   const dateEl = document.querySelector('[data-live-date]');
   if (dateEl) {
-    const fmt = new Intl.DateTimeFormat('es-VE', {
+    const fmt = new Intl.DateTimeFormat('en-US', {
       weekday: 'long',
       day: '2-digit',
       month: 'long',
@@ -27,7 +27,7 @@
   const clockEl = document.querySelector('[data-live-clock]');
   if (clockEl) {
     const updateClock = () => {
-      const t = new Intl.DateTimeFormat('es-VE', {
+      const t = new Intl.DateTimeFormat('en-US', {
         hour: '2-digit',
         minute: '2-digit',
         hour12: false,
@@ -74,11 +74,11 @@
     const status = form.querySelector('.form-status');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      status.textContent = 'Enviando…';
+      status.textContent = 'Sending...';
       status.style.color = 'var(--ink-soft)';
       setTimeout(() => {
         status.textContent =
-          '✓ Mensaje recibido. Le responderemos en 1–2 días hábiles.';
+          'Message received. We will reply within 1-2 business days.';
         status.style.color = 'var(--green)';
         form.reset();
       }, 700);

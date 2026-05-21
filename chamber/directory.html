@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es-VE">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Directorio — Camara de Comercio de Santa Teresa del Tuy</title>
-  <meta name="description" content="Directorio publico de empresas y organizaciones afiliadas a la Camara de Comercio de Santa Teresa del Tuy." />
+  <title>Directory — Chamber of Commerce of Santa Teresa del Tuy</title>
+  <meta name="description" content="Public directory of businesses and organizations affiliated with the Chamber of Commerce of Santa Teresa del Tuy." />
   <meta name="author" content="Diego Granados" />
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Directorio — Camara de Comercio de Santa Teresa del Tuy" />
-  <meta property="og:description" content="Directorio publico de empresas y organizaciones afiliadas a la Camara de Comercio de Santa Teresa del Tuy." />
+  <meta property="og:title" content="Directory — Chamber of Commerce of Santa Teresa del Tuy" />
+  <meta property="og:description" content="Public directory of businesses and organizations affiliated with the Chamber of Commerce of Santa Teresa del Tuy." />
   <meta property="og:image" content="images/social-directory.webp" />
   <meta property="og:url" content="https://diegogranados.github.io/wdd231/chamber/directory.html" />
 
@@ -25,7 +25,7 @@
   <div class="utility">
     <div class="container">
       <div class="util-left">
-        <span><span class="live-dot"></span>Sesion abierta</span>
+        <span><span class="live-dot"></span>Session open</span>
         <span data-live-date>—</span>
       </div>
       <div class="util-right">
@@ -38,24 +38,24 @@
   <!-- Header / Nav -->
   <header class="site-header">
     <div class="container">
-      <nav class="nav" aria-label="Navegacion principal">
-        <a class="brand" href="index.html" aria-label="Inicio">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Home">
           <span class="brand-mark" aria-hidden="true">C</span>
           <span class="brand-name">
-            <span class="l1">Camara de Comercio</span>
+            <span class="l1">Chamber of Commerce</span>
             <span class="l2">Santa Teresa del Tuy · Est. 1968</span>
           </span>
         </a>
         <ul class="nav-links" id="primary-nav">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="discover.html">Descubrir</a></li>
-          <li><a href="directory.html" class="active">Directorio</a></li>
-          <li><a href="join.html">Afiliarse</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
         </ul>
         <div class="nav-cta">
-          <a class="btn btn-ghost btn-sm" href="join.html">Iniciar sesion</a>
-          <a class="btn btn-primary btn-sm" href="join.html#aplicar">Afiliarse <span class="arrow">→</span></a>
-          <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menu"><span class="bars"></span></button>
+          <a class="btn btn-ghost btn-sm" href="join.html">Sign in</a>
+          <a class="btn btn-primary btn-sm" href="join.html#apply">Join <span class="arrow">→</span></a>
+          <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
         </div>
       </nav>
     </div>
@@ -65,19 +65,19 @@
   <section class="page-hero">
     <div class="container">
       <div class="crumb">
-        <a href="index.html">Inicio</a> <span>/</span> <span>Directorio</span>
+        <a href="index.html">Home</a> <span>/</span> <span>Directory</span>
       </div>
       <div class="page-hero-grid">
         <div>
-          <span class="eyebrow">Empresas y organizaciones afiliadas</span>
-          <h1 class="section-title-mt">Directorio del<br /><em class="italic-green">Tuy Medio.</em></h1>
+          <span class="eyebrow">Affiliated businesses and organizations</span>
+          <h1 class="section-title-mt">Directory of the<br /><em class="italic-green">Tuy Valley.</em></h1>
         </div>
         <div>
-          <p class="lede">Explore las empresas afiliadas a la Camara. Filtre por categoria o cambie entre vista de cuadricula y lista.</p>
+          <p class="lede">Explore the businesses affiliated with the Chamber. Switch between grid and list views.</p>
           <div class="hero-legend">
             <span><span class="hero-legend-dot gold"></span>Gold</span>
             <span><span class="hero-legend-dot silver"></span>Silver</span>
-            <span><span class="hero-legend-dot np"></span>Miembro</span>
+            <span><span class="hero-legend-dot np"></span>Member</span>
           </div>
         </div>
       </div>
@@ -89,8 +89,8 @@
     <div class="container">
       <div class="directory-toolbar">
         <div class="view-toggle">
-          <button id="toggle-grid" class="active" aria-label="Vista cuadricula">Cuadricula</button>
-          <button id="toggle-list" aria-label="Vista lista">Lista</button>
+          <button id="toggle-grid" class="active" aria-label="Grid view">Grid</button>
+          <button id="toggle-list" aria-label="List view">List</button>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@
   <section class="section">
     <div class="container">
       <div id="directory-cards" class="dir-grid full">
-        <p class="text-soft">Cargando directorio...</p>
+        <p class="text-soft">Loading directory...</p>
       </div>
     </div>
   </section>
@@ -110,20 +110,20 @@
     <div class="container">
       <div class="cta-band">
         <div>
-          <span class="eyebrow">¿Su empresa aun no aparece?</span>
-          <h2 class="section-title-mt">Sumese al directorio del Tuy.</h2>
-          <p class="lede section-lede-mt">El directorio publico es uno de los beneficios mas visibles de afiliarse. Listing, perfil completo y enlaces a su sitio y redes.</p>
+          <span class="eyebrow">Your business not listed yet?</span>
+          <h2 class="section-title-mt">Join the Tuy directory.</h2>
+          <p class="lede section-lede-mt">The public directory is one of the most visible benefits of membership. Listing, full profile, and links to your website and social media.</p>
           <div class="actions section-actions-mt">
-            <a class="btn btn-amber" href="join.html#aplicar">Solicitar afiliacion <span class="arrow">→</span></a>
-            <a class="btn btn-ghost" href="join.html#beneficios">Comparar beneficios</a>
+            <a class="btn btn-amber" href="join.html#apply">Apply for membership <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" href="join.html#benefits">Compare benefits</a>
           </div>
         </div>
         <div>
           <ul class="cta-list">
-            <li><span>Listing basico (Silver)</span><span class="val">Incluido</span></li>
-            <li><span>Perfil ampliado (Gold)</span><span class="val">Incluido</span></li>
-            <li><span>Spotlight mensual</span><span class="val">Solo Gold</span></li>
-            <li><span>Tarifa especial ONG</span><span class="val-amber">-40%</span></li>
+            <li><span>Basic listing (Silver)</span><span class="val">Included</span></li>
+            <li><span>Extended profile (Gold)</span><span class="val">Included</span></li>
+            <li><span>Monthly spotlight</span><span class="val">Gold only</span></li>
+            <li><span>Special NGO rate</span><span class="val-amber">-40%</span></li>
           </ul>
         </div>
       </div>
@@ -138,55 +138,55 @@
           <div class="brand">
             <span class="brand-mark" aria-hidden="true">C</span>
             <span class="brand-name">
-              <span class="l1">Camara de Comercio</span>
+              <span class="l1">Chamber of Commerce</span>
               <span class="l2">Santa Teresa del Tuy · Est. 1968</span>
             </span>
           </div>
-          <p>Asociacion civil sin fines de lucro al servicio del comercio, la industria y los servicios del Valle del Tuy.</p>
-          <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Suscrito';">
-            <input type="email" placeholder="Su correo electronico" required />
-            <button type="submit">Suscribir</button>
+          <p>Non-profit civil association serving the commerce, industry, and services of the Tuy Valley.</p>
+          <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed';">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
           </form>
         </div>
         <div>
-          <h5>Camara</h5>
+          <h4>Chamber</h4>
           <ul>
-            <li><a href="discover.html">Descubrir</a></li>
-            <li><a href="discover.html#historia">Historia</a></li>
-            <li><a href="discover.html#demografia">Demografia</a></li>
-            <li><a href="discover.html#eventos">Eventos</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="discover.html#history">History</a></li>
+            <li><a href="discover.html#demographics">Demographics</a></li>
+            <li><a href="discover.html#events">Events</a></li>
           </ul>
         </div>
         <div>
-          <h5>Recursos</h5>
+          <h4>Resources</h4>
           <ul>
-            <li><a href="directory.html">Directorio</a></li>
-            <li><a href="join.html">Afiliarse</a></li>
-            <li><a href="#">Boletin mensual</a></li>
-            <li><a href="#">Asesoria legal</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Monthly newsletter</a></li>
+            <li><a href="#">Legal advisory</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h4>Contact</h4>
           <ul>
             <li>Av. Bolivar c/c Calle Sucre</li>
             <li>Santa Teresa del Tuy 1209</li>
-            <li>Estado Miranda, Venezuela</li>
+            <li>Miranda State, Venezuela</li>
             <li><a href="mailto:info@camarastt.org.ve">info@camarastt.org.ve</a></li>
             <li>+58 (239) 245-1180</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 1968–<span id="copyright-year"></span> Camara de Comercio de Santa Teresa del Tuy. RIF J-00214567-3.</span>
+        <span>&copy; 1968–<span id="copyright-year"></span> Chamber of Commerce of Santa Teresa del Tuy. RIF J-00214567-3.</span>
         <div class="legal">
-          <a href="#">Privacidad</a>
-          <a href="#">Terminos</a>
-          <a href="#">Transparencia</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Transparency</a>
         </div>
       </div>
       <div class="footer-dev">
-        Diego Granados | WDD 231 | Ultima modificacion: <span id="last-modified"></span>
+        Diego Granados | WDD 231 | Last modified: <span id="last-modified"></span>
       </div>
     </div>
   </footer>
