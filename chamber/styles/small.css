@@ -3,8 +3,6 @@
    Modern, business-forward, civic editorial
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
-
 /* ---------- Tokens ---------- */
 :root {
   /* Color */
@@ -818,7 +816,7 @@ p { margin: 0; text-wrap: pretty; }
   padding-bottom: 64px;
   border-bottom: 1px solid oklch(0.32 0.01 85);
 }
-.footer-grid h4 {
+.footer-grid h3 {
   font-family: var(--f-mono);
   font-size: 11px;
   letter-spacing: 0.16em;
