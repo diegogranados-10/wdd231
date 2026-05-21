@@ -114,7 +114,7 @@ p { margin: 0; text-wrap: pretty; }
 }
 
 /* ---------- Layout ---------- */
-.container {
+.wrapper {
   width: 100%;
   max-width: var(--maxw);
   margin: 0 auto;
@@ -130,7 +130,7 @@ p { margin: 0; text-wrap: pretty; }
 .grid { display: grid; gap: 24px; }
 
 /* ---------- Buttons ---------- */
-.btn {
+.cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -145,19 +145,19 @@ p { margin: 0; text-wrap: pretty; }
   border: 1px solid transparent;
   white-space: nowrap;
 }
-.btn .arrow { transition: transform 0.25s var(--ease); }
-.btn:hover .arrow { transform: translateX(3px); }
+.cta-btn .arrow { transition: transform 0.25s var(--ease); }
+.cta-btn:hover .arrow { transform: translateX(3px); }
 
-.btn-primary { background: var(--green); color: var(--bg); }
-.btn-primary:hover { background: var(--green-ink); }
+.cta-btn-primary { background: var(--green); color: var(--bg); }
+.cta-btn-primary:hover { background: var(--green-ink); }
 
-.btn-ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
-.btn-ghost:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.cta-btn-ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+.cta-btn-ghost:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
-.btn-amber { background: var(--amber); color: var(--ink); }
-.btn-amber:hover { background: var(--amber-2); }
+.cta-btn-amber { background: var(--amber); color: var(--ink); }
+.cta-btn-amber:hover { background: var(--amber-2); }
 
-.btn-sm { padding: 10px 16px; font-size: 13px; }
+.cta-btn-sm { padding: 10px 16px; font-size: 13px; }
 
 /* ---------- Top utility bar ---------- */
 .utility {
@@ -167,7 +167,7 @@ p { margin: 0; text-wrap: pretty; }
   font-family: var(--f-mono);
   letter-spacing: 0.04em;
 }
-.utility .container {
+.utility .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -293,7 +293,7 @@ p { margin: 0; text-wrap: pretty; }
 }
 
 .nav-cta { display: flex; align-items: center; gap: 12px; }
-.nav-cta .btn-ghost { display: none; }
+.nav-cta .cta-btn-ghost { display: none; }
 
 .nav-toggle {
   display: flex;
@@ -354,7 +354,7 @@ p { margin: 0; text-wrap: pretty; }
   overflow: hidden;
 }
 .hero-image image-slot { width: 100%; height: 100%; }
-.hero-image .badge {
+.hero-image .photo-badge {
   position: absolute;
   top: 16px; left: 16px;
   background: var(--bg);
@@ -566,14 +566,14 @@ p { margin: 0; text-wrap: pretty; }
 .sec-head .right { display: flex; align-items: center; gap: 12px; justify-self: start; }
 
 /* ---------- Cards ---------- */
-.card {
+.panel {
   background: var(--paper);
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg);
   padding: 28px;
   transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
 }
-.card:hover { border-color: var(--ink-faint); }
+.panel:hover { border-color: var(--ink-faint); }
 
 /* ---------- Member directory grid ---------- */
 .dir-grid {
@@ -801,8 +801,8 @@ p { margin: 0; text-wrap: pretty; }
 .cta-band .eyebrow { color: var(--amber); }
 .cta-band .eyebrow::before { background: var(--amber); }
 .cta-band .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.cta-band .btn-ghost { color: var(--bg); border-color: oklch(0.45 0.01 85); }
-.cta-band .btn-ghost:hover { background: var(--bg); color: var(--ink); border-color: var(--bg); }
+.cta-band .cta-btn-ghost { color: var(--bg); border-color: oklch(0.45 0.01 85); }
+.cta-band .cta-btn-ghost:hover { background: var(--bg); color: var(--ink); border-color: var(--bg); }
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--ink);
@@ -1579,9 +1579,9 @@ image-slot {
 .perks strong { color: var(--ink); font-weight: 600; }
 .tier.featured .perks strong { color: var(--bg); }
 
-.tier .btn { margin-top: 8px; justify-content: center; }
-.tier.featured .btn-primary { background: var(--amber); color: var(--ink); }
-.tier.featured .btn-primary:hover { background: var(--bg); }
+.tier .cta-btn { margin-top: 8px; justify-content: center; }
+.tier.featured .cta-btn-primary { background: var(--amber); color: var(--ink); }
+.tier.featured .cta-btn-primary:hover { background: var(--bg); }
 
 /* Comparison table */
 .compare {

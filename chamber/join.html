@@ -8,8 +8,8 @@
   <meta name="author" content="Diego Granados" />
   <meta property="og:title" content="Join — Chamber of Commerce of Santa Teresa del Tuy" />
   <meta property="og:description" content="Membership levels, benefits, and application form for the Chamber of Commerce of Santa Teresa del Tuy." />
-  <meta property="og:image" content="https://diegogranados.github.io/wdd231/chamber/images/social-join.webp" />
-  <meta property="og:url" content="https://diegogranados.github.io/wdd231/chamber/join.html" />
+  <meta property="og:image" content="https://diegogranados-10.github.io/wdd231/chamber/images/social-join.webp" />
+  <meta property="og:url" content="https://diegogranados-10.github.io/wdd231/chamber/join.html" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
 
   <!-- Utility bar -->
   <div class="utility">
-    <div class="container">
+    <div class="wrapper">
       <div class="util-left">
         <span><span class="live-dot"></span>Session open</span>
         <span data-live-date>—</span>
@@ -37,7 +37,7 @@
 
   <!-- Header / Nav -->
   <header class="site-header">
-    <div class="container">
+    <div class="wrapper">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="index.html" aria-label="Home">
           <span class="brand-mark" aria-hidden="true">C</span>
@@ -53,8 +53,8 @@
           <li><a href="join.html" class="active">Join</a></li>
         </ul>
         <div class="nav-cta">
-          <a class="btn btn-ghost btn-sm" href="join.html">Sign in</a>
-          <a class="btn btn-primary btn-sm" href="#apply">Join <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="join.html">Sign in</a>
+          <a class="cta-btn cta-btn-primary cta-btn-sm" href="#apply">Join <span class="arrow">→</span></a>
           <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
         </div>
       </nav>
@@ -65,7 +65,7 @@
 
   <!-- Page hero -->
   <section class="page-hero" id="benefits">
-    <div class="container">
+    <div class="wrapper">
       <div class="crumb">
         <a href="index.html">Home</a> <span>/</span> <span>Join</span>
       </div>
@@ -79,8 +79,8 @@
         <div>
           <p class="lede">Three levels designed for businesses, non-profit organizations, and startups. Access to directory, training, events, advisory, and the "Chamber Affiliate" seal.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#apply">Apply for membership <span class="arrow">→</span></a>
-            <a class="btn btn-ghost" href="#comparison">Compare levels</a>
+            <a class="cta-btn cta-btn-primary" href="#apply">Apply for membership <span class="arrow">→</span></a>
+            <a class="cta-btn cta-btn-ghost" href="#comparison">Compare levels</a>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
 
   <!-- Tiers -->
   <section class="section">
-    <div class="container">
+    <div class="wrapper">
       <div class="sec-head">
         <div>
           <span class="eyebrow">Three levels</span>
@@ -134,7 +134,7 @@
               <span><strong>Volunteer call</strong> publication.</span>
             </li>
           </ul>
-          <a class="btn btn-ghost" href="#apply">Apply for social rate <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-ghost" href="#apply">Apply for social rate <span class="arrow">→</span></a>
         </article>
 
         <!-- Silver tier -->
@@ -174,7 +174,7 @@
               <span><strong>Assembly vote</strong> and discounts from affiliated suppliers.</span>
             </li>
           </ul>
-          <a class="btn btn-ghost" href="#apply">Apply for Silver <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-ghost" href="#apply">Apply for Silver <span class="arrow">→</span></a>
         </article>
 
         <!-- Gold tier -->
@@ -219,7 +219,7 @@
               <span><strong>Unlimited legal and tax advisory</strong> + investment support.</span>
             </li>
           </ul>
-          <a class="btn btn-primary" href="#apply">Apply for Gold <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-primary" href="#apply">Apply for Gold <span class="arrow">→</span></a>
         </article>
       </div>
     </div>
@@ -227,7 +227,7 @@
 
   <!-- Comparison table -->
   <section class="section bg-cream" id="comparison">
-    <div class="container">
+    <div class="wrapper">
       <div class="sec-head">
         <div>
           <span class="eyebrow">Comparison</span>
@@ -332,7 +332,7 @@
 
   <!-- Application form -->
   <section class="section" id="apply">
-    <div class="container">
+    <div class="wrapper">
       <div class="sec-head">
         <div>
           <span class="eyebrow">Membership application</span>
@@ -352,7 +352,7 @@
           </ul>
         </aside>
 
-        <form class="card form-card" data-contact-form>
+        <form class="panel form-card" data-contact-form>
           <div class="form-section-title">1 · Requested level</div>
           <div class="tier-radio">
             <label>
@@ -452,7 +452,7 @@
           </label>
 
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Submit application <span class="arrow">→</span></button>
+            <button type="submit" class="cta-btn cta-btn-primary">Submit application <span class="arrow">→</span></button>
             <span class="form-status text-faint">Your data is protected under applicable privacy laws.</span>
           </div>
         </form>
@@ -462,7 +462,7 @@
 
   <!-- FAQ -->
   <section class="section bg-cream">
-    <div class="container">
+    <div class="wrapper">
       <div class="sec-head">
         <div>
           <span class="eyebrow">Frequently asked questions</span>
@@ -499,7 +499,7 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="wrapper">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="brand">

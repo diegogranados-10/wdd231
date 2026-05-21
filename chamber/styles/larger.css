@@ -94,7 +94,7 @@
   }
   .nav-links a { padding: 10px 14px; border-bottom: none; border-radius: 999px; font-size: 14px; }
   .nav-links a:hover { background: var(--bg-2); }
-  .nav-cta .btn-ghost { display: inline-flex; }
+  .nav-cta .cta-btn-ghost { display: inline-flex; }
   .nav-toggle { display: none; }
 }
 

@@ -10,8 +10,8 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Directory — Chamber of Commerce of Santa Teresa del Tuy" />
   <meta property="og:description" content="Public directory of businesses and organizations affiliated with the Chamber of Commerce of Santa Teresa del Tuy." />
-  <meta property="og:image" content="https://diegogranados.github.io/wdd231/chamber/images/social-directory.webp" />
-  <meta property="og:url" content="https://diegogranados.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:image" content="https://diegogranados-10.github.io/wdd231/chamber/images/social-directory.webp" />
+  <meta property="og:url" content="https://diegogranados-10.github.io/wdd231/chamber/directory.html" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
 
   <!-- Utility bar -->
   <div class="utility">
-    <div class="container">
+    <div class="wrapper">
       <div class="util-left">
         <span><span class="live-dot"></span>Session open</span>
         <span data-live-date>—</span>
@@ -40,7 +40,7 @@
 
   <!-- Header / Nav -->
   <header class="site-header">
-    <div class="container">
+    <div class="wrapper">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="index.html" aria-label="Home">
           <span class="brand-mark" aria-hidden="true">C</span>
@@ -56,8 +56,8 @@
           <li><a href="join.html">Join</a></li>
         </ul>
         <div class="nav-cta">
-          <a class="btn btn-ghost btn-sm" href="join.html">Sign in</a>
-          <a class="btn btn-primary btn-sm" href="join.html#apply">Join <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="join.html">Sign in</a>
+          <a class="cta-btn cta-btn-primary cta-btn-sm" href="join.html#apply">Join <span class="arrow">→</span></a>
           <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
         </div>
       </nav>
@@ -68,7 +68,7 @@
 
   <!-- Page hero -->
   <section class="page-hero">
-    <div class="container">
+    <div class="wrapper">
       <div class="crumb">
         <a href="index.html">Home</a> <span>/</span> <span>Directory</span>
       </div>
@@ -91,7 +91,7 @@
 
   <!-- Toolbar -->
   <section class="section tight" id="toolbar-section">
-    <div class="container">
+    <div class="wrapper">
       <div class="directory-toolbar">
         <div class="view-toggle">
           <button id="toggle-grid" class="active" aria-label="Grid view">Grid</button>
@@ -103,7 +103,7 @@
 
   <!-- Directory grid (populated by JS from members.json) -->
   <section class="section">
-    <div class="container">
+    <div class="wrapper">
       <div id="directory-cards" class="dir-grid full">
         <p class="text-soft">Loading directory...</p>
       </div>
@@ -112,15 +112,15 @@
 
   <!-- CTA -->
   <section class="section tight">
-    <div class="container">
+    <div class="wrapper">
       <div class="cta-band">
         <div>
           <span class="eyebrow">Your business not listed yet?</span>
           <h2 class="section-title-mt">Join the Tuy directory.</h2>
           <p class="lede section-lede-mt">The public directory is one of the most visible benefits of membership. Listing, full profile, and links to your website and social media.</p>
           <div class="actions section-actions-mt">
-            <a class="btn btn-amber" href="join.html#apply">Apply for membership <span class="arrow">→</span></a>
-            <a class="btn btn-ghost" href="join.html#benefits">Compare benefits</a>
+            <a class="cta-btn cta-btn-amber" href="join.html#apply">Apply for membership <span class="arrow">→</span></a>
+            <a class="cta-btn cta-btn-ghost" href="join.html#benefits">Compare benefits</a>
           </div>
         </div>
         <div>
@@ -139,7 +139,7 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="wrapper">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="brand">

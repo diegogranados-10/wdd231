@@ -8,8 +8,8 @@
   <meta name="author" content="Diego Granados" />
   <meta property="og:title" content="Chamber of Commerce of Santa Teresa del Tuy" />
   <meta property="og:description" content="We drive commerce, investment, and business development in the Tuy Valley since 1968." />
-  <meta property="og:image" content="https://diegogranados.github.io/wdd231/chamber/images/social-home.webp" />
-  <meta property="og:url" content="https://diegogranados.github.io/wdd231/chamber/index.html" />
+  <meta property="og:image" content="https://diegogranados-10.github.io/wdd231/chamber/images/social-home.webp" />
+  <meta property="og:url" content="https://diegogranados-10.github.io/wdd231/chamber/index.html" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
 
   <!-- Utility bar -->
   <div class="utility">
-    <div class="container">
+    <div class="wrapper">
       <div class="util-left">
         <span><span class="live-dot"></span>Session open</span>
         <span data-live-date>—</span>
@@ -37,7 +37,7 @@
 
   <!-- Header / Nav -->
   <header class="site-header">
-    <div class="container">
+    <div class="wrapper">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="index.html" aria-label="Home">
           <span class="brand-mark" aria-hidden="true">C</span>
@@ -53,8 +53,8 @@
           <li><a href="join.html">Join</a></li>
         </ul>
         <div class="nav-cta">
-          <a class="btn btn-ghost btn-sm" href="join.html">Sign in</a>
-          <a class="btn btn-primary btn-sm" href="join.html#apply">Join <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="join.html">Sign in</a>
+          <a class="cta-btn cta-btn-primary cta-btn-sm" href="join.html#apply">Join <span class="arrow">→</span></a>
           <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
         </div>
       </nav>
@@ -65,7 +65,7 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container">
+    <div class="wrapper">
       <div class="hero-grid">
         <div>
           <span class="eyebrow">Newsletter No. 312 · May 2026</span>
@@ -74,8 +74,8 @@
             <span class="alt">Tuy Valley</span><br />meets.
           </h1>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="join.html#apply">Apply for membership <span class="arrow">→</span></a>
-            <a class="btn btn-ghost" href="directory.html">Explore directory</a>
+            <a class="cta-btn cta-btn-primary" href="join.html#apply">Apply for membership <span class="arrow">→</span></a>
+            <a class="cta-btn cta-btn-ghost" href="directory.html">Explore directory</a>
           </div>
           <div class="hero-meta">
             <div class="stat"><span class="num">387</span><span class="label">Affiliated businesses</span></div>
@@ -84,7 +84,7 @@
           </div>
         </div>
         <div class="hero-image">
-          <span class="badge">Plaza Bolivar · Santa Teresa</span>
+          <span class="photo-badge">Plaza Bolivar · Santa Teresa</span>
           <image-slot id="hero-photo" placeholder="Downtown Santa Teresa del Tuy view" shape="rounded" radius="10"></image-slot>
         </div>
       </div>
@@ -101,7 +101,7 @@
 
   <!-- Today in Santa Teresa: weather + community pulse -->
   <section class="section tight">
-    <div class="container">
+    <div class="wrapper">
       <div class="today-grid">
         <article class="today-card weather">
           <div class="today-head">
@@ -182,7 +182,7 @@
 
   <!-- Mission split -->
   <section class="section">
-    <div class="container">
+    <div class="wrapper">
       <div class="split">
         <div>
           <span class="eyebrow">Who we are</span>
@@ -207,7 +207,7 @@
             </div>
           </div>
           <div class="mission-cta">
-            <a class="btn btn-ghost" href="discover.html">Discover Santa Teresa <span class="arrow">→</span></a>
+            <a class="cta-btn cta-btn-ghost" href="discover.html">Discover Santa Teresa <span class="arrow">→</span></a>
           </div>
         </div>
         <div class="split-img">
@@ -219,7 +219,7 @@
 
   <!-- Stats -->
   <section class="section tight">
-    <div class="container">
+    <div class="wrapper">
       <div class="stats">
         <div class="stat-cell">
           <span class="num">387<span class="unit">+</span></span>
@@ -243,14 +243,14 @@
 
   <!-- Featured members -->
   <section class="section bg-cream">
-    <div class="container">
+    <div class="wrapper">
       <div class="sec-head">
         <div>
           <span class="eyebrow">Affiliated businesses</span>
           <h2 class="section-title-mt">A sample from the directory.</h2>
         </div>
         <div class="right">
-          <a class="btn btn-ghost btn-sm" href="directory.html">View all <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="directory.html">View all <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -302,14 +302,14 @@
 
   <!-- Events -->
   <section class="section">
-    <div class="container">
+    <div class="wrapper">
       <div class="sec-head">
         <div>
           <span class="eyebrow">Upcoming events</span>
           <h2 class="section-title-mt">Events calendar.</h2>
         </div>
         <div class="right">
-          <a class="btn btn-ghost btn-sm" href="discover.html#events">View full schedule <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="discover.html#events">View full schedule <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -381,14 +381,14 @@
 
   <!-- News -->
   <section class="section bg-cream">
-    <div class="container">
+    <div class="wrapper">
       <div class="sec-head">
         <div>
           <span class="eyebrow">News and analysis</span>
           <h2 class="section-title-mt">Latest from the Valley.</h2>
         </div>
         <div class="right">
-          <a class="btn btn-ghost btn-sm" href="#">Full archive <span class="arrow">→</span></a>
+          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="#">Full archive <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -420,15 +420,15 @@
 
   <!-- CTA Band -->
   <section class="section">
-    <div class="container">
+    <div class="wrapper">
       <div class="cta-band">
         <div>
           <span class="eyebrow">2026 membership open</span>
           <h2 class="section-title-mt">Your business belongs to something bigger.</h2>
           <p class="lede section-lede-mt">Join the most active business network in the Tuy Valley. Access to events, legal advisory, business roundtables, and discounts on affiliated services.</p>
           <div class="actions section-actions-mt">
-            <a class="btn btn-amber" href="join.html#apply">Start membership <span class="arrow">→</span></a>
-            <a class="btn btn-ghost" href="join.html#benefits">Learn about benefits</a>
+            <a class="cta-btn cta-btn-amber" href="join.html#apply">Start membership <span class="arrow">→</span></a>
+            <a class="cta-btn cta-btn-ghost" href="join.html#benefits">Learn about benefits</a>
           </div>
         </div>
         <div>
@@ -447,7 +447,7 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="wrapper">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="brand">
