@@ -1,5 +1,7 @@
 /* =========================================================
-   WDD 231 — Course Home
+   WDD 231 — Course Home (small.css)
+   Base layout for every width from 320px up.
+   Wider layouts are in larger.css.
    Palette: warm off-white, deep teal accent, coral highlight
    Type:    Outfit (Google Fonts)
    ========================================================= */
@@ -407,69 +409,4 @@ a:hover { text-decoration-thickness: 2px; }
   position: absolute !important;
   width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-}
-
-/* =========================================================
-   Medium screens (>= 640px)
-   ========================================================= */
-@media (min-width: 640px) {
-  .course-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .filter-bar { flex-wrap: nowrap; }
-}
-
-/* =========================================================
-   Large screens (>= 880px) — horizontal nav, two-column intro
-   ========================================================= */
-@media (min-width: 880px) {
-  .menu-toggle { display: none; }
-
-  .header-inner { padding: 16px 28px; }
-
-  .primary-nav {
-    display: block;
-    width: auto;
-    margin-left: auto;
-    border-top: none;
-  }
-
-  .primary-nav ul {
-    display: flex;
-    gap: 4px;
-  }
-
-  .primary-nav a {
-    border-bottom: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-  }
-
-  .primary-nav a[aria-current="page"] {
-    background: var(--ink);
-    color: var(--accent-ink);
-  }
-
-  .main { padding: 36px 28px 64px; }
-
-  .intro-grid {
-    grid-template-columns: 1.4fr 1fr;
-    gap: 24px;
-  }
-
-  .course-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .footer-inner {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-  .footer-inner .footer-meta { text-align: center; }
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; }
 }
