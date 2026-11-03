@@ -8,8 +8,20 @@
       const open = links.classList.toggle('open');
       toggle.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
   }
+
+  // Newsletter signup (no backend)
+  document.querySelectorAll('[data-newsletter]').forEach((form) => {
+    const status = form.querySelector('[data-newsletter-status]');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.reset();
+      form.querySelector('button').textContent = 'Subscribed';
+      if (status) status.textContent = 'Thanks for subscribing.';
+    });
+  });
 
   // Live date in utility bar
   const dateEl = document.querySelector('[data-live-date]');
@@ -38,43 +50,13 @@
     setInterval(updateClock, 30 * 1000);
   }
 
-  // Member directory filter chips
-  const chips = document.querySelectorAll('[data-filter]');
-  const cards = document.querySelectorAll('[data-cat]');
-  if (chips.length && cards.length) {
-    chips.forEach((chip) => {
-      chip.addEventListener('click', () => {
-        chips.forEach((c) => c.classList.remove('active'));
-        chip.classList.add('active');
-        const filter = chip.dataset.filter;
-        cards.forEach((card) => {
-          const cat = card.dataset.cat;
-          card.style.display =
-            filter === 'all' || cat === filter ? '' : 'none';
-        });
-      });
-    });
-  }
-
-  // Member directory search
-  const searchInput = document.querySelector('[data-search]');
-  if (searchInput && cards.length) {
-    searchInput.addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase().trim();
-      cards.forEach((card) => {
-        const txt = card.textContent.toLowerCase();
-        card.style.display = !q || txt.includes(q) ? '' : 'none';
-      });
-    });
-  }
-
   // Contact form (no real backend) — just simulate validation/submission
   const form = document.querySelector('[data-contact-form]');
   if (form) {
     const status = form.querySelector('.form-status');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      status.textContent = 'Sending...';
+      status.textContent = 'Sending…';
       status.style.color = 'var(--ink-soft)';
       setTimeout(() => {
         status.textContent =

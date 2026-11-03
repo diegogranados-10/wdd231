@@ -21,12 +21,13 @@
   <script src="scripts/script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Utility bar -->
   <div class="utility">
     <div class="wrapper">
       <div class="util-left">
-        <span><span class="live-dot"></span>Session open</span>
+        <span><span class="live-dot" aria-hidden="true"></span>Session open</span>
         <span data-live-date>—</span>
       </div>
       <div class="util-right">
@@ -49,20 +50,20 @@
         </a>
         <ul class="nav-links" id="primary-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
           <li><a href="directory.html">Directory</a></li>
           <li><a href="join.html">Join</a></li>
         </ul>
         <div class="nav-cta">
-          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="join.html">Sign in</a>
-          <a class="cta-btn cta-btn-primary cta-btn-sm" href="join.html#apply">Join <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost cta-button-sm" href="join.html">Sign In</a>
+          <a class="cta-button cta-button-primary cta-button-sm" href="join.html#apply">Join <span class="arrow" aria-hidden="true">→</span></a>
           <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
         </div>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
   <!-- Page hero -->
   <section class="page-hero">
@@ -163,7 +164,7 @@
   </section>
 
   <!-- Demographics -->
-  <section class="section bg-cream" id="demographics">
+  <section class="section section-cream" id="demographics">
     <div class="wrapper">
       <div class="sec-head">
         <div>
@@ -244,7 +245,7 @@
           <span class="label">Business growth</span>
           <span class="demo-num">+7.4%</span>
           <p>New business openings registered in Q1 2026 compared to the same period in 2025.</p>
-          <a class="pulse-link" href="join.html">Access full reports <span class="arrow">→</span></a>
+          <a class="pulse-link" href="join.html">Access full reports <span class="arrow" aria-hidden="true">→</span></a>
         </article>
       </div>
     </div>
@@ -297,7 +298,7 @@
   </section>
 
   <!-- Events -->
-  <section class="section bg-cream" id="events">
+  <section class="section section-cream" id="events">
     <div class="wrapper">
       <div class="sec-head">
         <div>
@@ -317,7 +318,7 @@
               <span>8:00 AM – 5:00 PM</span><span>Hotel Casa Avila, Charallave</span><span>240 spots</span>
             </div>
           </div>
-          <span class="event-arrow">→</span>
+          <span class="event-arrow" aria-hidden="true">→</span>
         </article>
         <article class="event-row">
           <div class="event-date"><span class="month">May</span><span class="day">31</span><span class="year">2026</span></div>
@@ -328,7 +329,7 @@
               <span>All day</span><span>Plaza Bolivar</span><span>Free admission</span>
             </div>
           </div>
-          <span class="event-arrow">→</span>
+          <span class="event-arrow" aria-hidden="true">→</span>
         </article>
         <article class="event-row">
           <div class="event-date"><span class="month">Jun</span><span class="day">04</span><span class="year">2026</span></div>
@@ -339,7 +340,7 @@
               <span>2:00 PM – 6:00 PM</span><span>Chamber headquarters</span><span>Free for members</span>
             </div>
           </div>
-          <span class="event-arrow">→</span>
+          <span class="event-arrow" aria-hidden="true">→</span>
         </article>
         <article class="event-row">
           <div class="event-date"><span class="month">Jun</span><span class="day">19</span><span class="year">2026</span></div>
@@ -350,7 +351,7 @@
               <span>9:00 AM – 1:00 PM</span><span>Bolivar Hall, Chamber</span><span>40 spots</span>
             </div>
           </div>
-          <span class="event-arrow">→</span>
+          <span class="event-arrow" aria-hidden="true">→</span>
         </article>
         <article class="event-row">
           <div class="event-date"><span class="month">Jul</span><span class="day">05</span><span class="year">2026</span></div>
@@ -361,7 +362,7 @@
               <span>12:30 PM – 3:00 PM</span><span>Club Social Tuy</span><span>120 spots</span>
             </div>
           </div>
-          <span class="event-arrow">→</span>
+          <span class="event-arrow" aria-hidden="true">→</span>
         </article>
       </div>
     </div>
@@ -376,8 +377,8 @@
           <h2 class="section-title-mt">We help you land your business in the Tuy.</h2>
           <p class="lede section-lede-mt">Free advisory for investors and companies evaluating setting up in Santa Teresa or neighboring municipalities.</p>
           <div class="actions section-actions-mt">
-            <a class="cta-btn cta-btn-amber" href="join.html#apply">Talk to an advisor <span class="arrow">→</span></a>
-            <a class="cta-btn cta-btn-ghost" href="directory.html">View business landscape</a>
+            <a class="cta-button cta-button-amber" href="join.html#apply">Talk to an advisor <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="cta-button cta-button-ghost" href="directory.html">View business landscape</a>
           </div>
         </div>
         <div>
@@ -407,9 +408,10 @@
             </span>
           </div>
           <p>Non-profit civil association serving the commerce, industry, and services of the Tuy Valley.</p>
-          <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed';">
-            <input type="email" placeholder="Your email address" required />
+          <form class="newsletter" data-newsletter>
+            <input type="email" name="email" autocomplete="email" spellcheck="false" aria-label="Email address" placeholder="Your email address…" required />
             <button type="submit">Subscribe</button>
+            <span class="sr-only" role="status" aria-live="polite" data-newsletter-status></span>
           </form>
         </div>
         <div>

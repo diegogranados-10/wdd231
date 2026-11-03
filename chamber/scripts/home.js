@@ -1,4 +1,5 @@
 // Chamber of Commerce — Home page: Weather + Spotlights
+import { loadMembers, tierOf, esc } from "./members.js";
 
 const API_KEY = "2c36c2fdfa0f16cfa293b62b24b3b416";
 const LAT = 10.23;
@@ -25,6 +26,8 @@ async function loadWeather() {
     displayForecast(forecast);
   } catch (err) {
     console.error("Weather fetch failed:", err);
+    const descEl = document.getElementById("w-desc");
+    if (descEl) descEl.textContent = "Weather unavailable. Try again later.";
   }
 }
 
@@ -101,37 +104,13 @@ function capitalize(str) {
 
 async function loadSpotlights() {
   try {
-    const res = await fetch("data/members.json");
-    if (!res.ok) throw new Error("Members fetch error");
-    const members = await res.json();
-
-    // Filter gold (3) and silver (2) members
+    const members = await loadMembers();
     const qualified = members.filter((m) => m.membership >= 2);
-
-    // Randomly pick 2 or 3
     const count = Math.min(qualified.length, Math.random() < 0.5 ? 2 : 3);
-    const shuffled = qualified.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, count);
-
+    const selected = [...qualified].sort(() => 0.5 - Math.random()).slice(0, count);
     displaySpotlights(selected);
   } catch (err) {
     console.error("Spotlights fetch failed:", err);
-  }
-}
-
-function getMembershipLabel(level) {
-  switch (level) {
-    case 3: return "Gold";
-    case 2: return "Silver";
-    default: return "Member";
-  }
-}
-
-function getMembershipClass(level) {
-  switch (level) {
-    case 3: return "gold";
-    case 2: return "silver";
-    default: return "";
   }
 }
 
@@ -141,26 +120,25 @@ function displaySpotlights(members) {
 
   container.innerHTML = members
     .map((m) => {
-      const tierLabel = getMembershipLabel(m.membership);
-      const tierClass = getMembershipClass(m.membership);
+      const tier = tierOf(m.membership);
       return `
         <article class="dir-card">
-          <span class="dir-tier ${tierClass}">${tierLabel}</span>
+          <span class="dir-tier ${tier.cls}">${tier.label}</span>
           <div class="dir-img">
-            <img src="images/${m.image}" alt="${m.name}" loading="lazy">
+            <img src="images/${esc(m.image)}" alt="${esc(m.name)}" width="400" height="300" loading="lazy">
           </div>
-          <div class="dir-cat">${m.category}</div>
+          <div class="dir-cat">${esc(m.category)}</div>
           <div class="dir-meta">
-            <div class="dir-name">${m.name}</div>
+            <div class="dir-name">${esc(m.name)}</div>
           </div>
           <div class="dir-contact">
-            <span>${m.phone}</span>
-            <span>${m.address}</span>
-            <a href="${m.website}" target="_blank" rel="noopener">${m.website.replace(/^https?:\/\//, "")}</a>
+            <span>${esc(m.phone)}</span>
+            <span>${esc(m.address)}</span>
+            <a href="${esc(m.website)}" target="_blank" rel="noopener">${esc(m.website.replace(/^https?:\/\//, ""))}<span class="sr-only"> (opens in a new tab)</span></a>
           </div>
           <div class="dir-foot">
-            <span>${tierLabel} member</span>
-            <a href="directory.html">Profile \u2192</a>
+            <span>${tier.label} member</span>
+            <a href="directory.html">Profile <span aria-hidden="true">\u2192</span></a>
           </div>
         </article>`;
     })

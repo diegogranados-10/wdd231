@@ -1,92 +1,74 @@
-// Directory page — fetch members from JSON, render grid/list, toggle view
-(function () {
-  const grid = document.getElementById('directory-cards');
-  const gridBtn = document.getElementById('toggle-grid');
-  const listBtn = document.getElementById('toggle-list');
+import { loadMembers, tierOf, esc } from './members.js';
 
-  if (!grid) return;
+const grid = document.getElementById('directory-cards');
+const gridBtn = document.getElementById('toggle-grid');
+const listBtn = document.getElementById('toggle-list');
 
-  const membershipLabel = { 1: 'Member', 2: 'Silver', 3: 'Gold' };
-  const membershipClass = { 1: 'np', 2: 'silver', 3: 'gold' };
-
-  function renderCard(m) {
-    const tierClass = membershipClass[m.membership];
-    const tierLabel = membershipLabel[m.membership];
-    return `<article class="dir-card" data-cat="${tierClass}">
-      <span class="dir-tier ${tierClass}">${tierLabel}</span>
+function renderCard(m) {
+  const tier = tierOf(m.membership);
+  return `<article class="dir-card" data-cat="${tier.cls}">
+      <span class="dir-tier ${tier.cls}">${tier.label}</span>
       <div class="dir-img">
-        <img src="images/${m.image}" alt="${m.name}" loading="lazy" onerror="this.style.display='none'">
+        <img src="images/${esc(m.image)}" alt="${esc(m.name)}" width="400" height="300" loading="lazy">
       </div>
-      <div class="dir-cat">${m.category}</div>
+      <div class="dir-cat">${esc(m.category)}</div>
       <div class="dir-meta">
-        <div class="dir-name">${m.name}</div>
+        <div class="dir-name">${esc(m.name)}</div>
       </div>
-      <p class="dir-desc">${m.description}</p>
+      <p class="dir-desc">${esc(m.description)}</p>
       <div class="dir-contact">
-        <span>${m.address}</span>
-        <span>${m.phone}</span>
+        <span>${esc(m.address)}</span>
+        <span>${esc(m.phone)}</span>
       </div>
       <div class="dir-foot">
-        <a href="${m.website}" target="_blank" rel="noopener">Website</a>
+        <a href="${esc(m.website)}" target="_blank" rel="noopener">Website</a>
       </div>
     </article>`;
-  }
+}
 
-  function renderList(m) {
-    const tierClass = membershipClass[m.membership];
-    const tierLabel = membershipLabel[m.membership];
-    return `<article class="dir-list-item" data-cat="${tierClass}">
-      <span class="dir-tier ${tierClass}">${tierLabel}</span>
+function renderListItem(m) {
+  const tier = tierOf(m.membership);
+  return `<article class="dir-list-item" data-cat="${tier.cls}">
+      <span class="dir-tier ${tier.cls}">${tier.label}</span>
       <div class="dir-list-info">
-        <strong>${m.name}</strong>
-        <span class="dir-cat">${m.category}</span>
-        <span class="dir-desc">${m.description}</span>
+        <strong>${esc(m.name)}</strong>
+        <span class="dir-cat">${esc(m.category)}</span>
+        <span class="dir-desc">${esc(m.description)}</span>
       </div>
       <div class="dir-list-contact">
-        <span>${m.phone}</span>
-        <a href="${m.website}" target="_blank" rel="noopener">Website</a>
+        <span>${esc(m.phone)}</span>
+        <a href="${esc(m.website)}" target="_blank" rel="noopener">Website</a>
       </div>
     </article>`;
-  }
+}
 
-  let members = [];
-  let currentView = 'grid';
+const VIEWS = {
+  grid: { container: 'dir-grid full', render: renderCard, button: gridBtn, other: listBtn },
+  list: { container: 'dir-list', render: renderListItem, button: listBtn, other: gridBtn },
+};
 
-  function display() {
-    if (currentView === 'grid') {
-      grid.className = 'dir-grid full';
-      grid.innerHTML = members.map(renderCard).join('');
-    } else {
-      grid.className = 'dir-list';
-      grid.innerHTML = members.map(renderList).join('');
-    }
-  }
+let members = [];
 
-  async function fetchMembers() {
-    try {
-      const response = await fetch('data/members.json');
-      if (!response.ok) throw new Error('Failed to fetch members');
-      members = await response.json();
-      display();
-    } catch (err) {
-      grid.innerHTML = '<p class="text-soft">Could not load directory members.</p>';
-    }
-  }
+function show(view) {
+  const { container, render, button, other } = VIEWS[view];
+  grid.className = container;
+  grid.innerHTML = members.map(render).join('');
+  button.classList.add('active');
+  other.classList.remove('active');
+  button.setAttribute('aria-pressed', 'true');
+  other.setAttribute('aria-pressed', 'false');
+}
 
-  if (gridBtn && listBtn) {
-    gridBtn.addEventListener('click', () => {
-      currentView = 'grid';
-      gridBtn.classList.add('active');
-      listBtn.classList.remove('active');
-      display();
-    });
-    listBtn.addEventListener('click', () => {
-      currentView = 'list';
-      listBtn.classList.add('active');
-      gridBtn.classList.remove('active');
-      display();
-    });
-  }
+grid.addEventListener('error', (e) => {
+  if (e.target instanceof HTMLImageElement) e.target.style.display = 'none';
+}, true);
+gridBtn.addEventListener('click', () => show('grid'));
+listBtn.addEventListener('click', () => show('list'));
 
-  fetchMembers();
-})();
+try {
+  members = await loadMembers();
+  show('grid');
+} catch (err) {
+  console.error('Directory fetch failed:', err);
+  grid.innerHTML = '<p class="text-soft">Could not load directory members.</p>';
+}

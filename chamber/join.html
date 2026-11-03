@@ -17,16 +17,16 @@
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/larger.css" />
-  <script src="scripts/image-slot.js" defer></script>
   <script src="scripts/script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Utility bar -->
   <div class="utility">
     <div class="wrapper">
       <div class="util-left">
-        <span><span class="live-dot"></span>Session open</span>
+        <span><span class="live-dot" aria-hidden="true"></span>Session open</span>
         <span data-live-date>—</span>
       </div>
       <div class="util-right">
@@ -51,18 +51,18 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="discover.html">Discover</a></li>
           <li><a href="directory.html">Directory</a></li>
-          <li><a href="join.html" class="active">Join</a></li>
+          <li><a href="join.html" class="active" aria-current="page">Join</a></li>
         </ul>
         <div class="nav-cta">
-          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="join.html">Sign in</a>
-          <a class="cta-btn cta-btn-primary cta-btn-sm" href="#apply">Join <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost cta-button-sm" href="join.html">Sign In</a>
+          <a class="cta-button cta-button-primary cta-button-sm" href="#apply">Join <span class="arrow" aria-hidden="true">→</span></a>
           <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
         </div>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
   <!-- Page hero -->
   <section class="page-hero" id="benefits">
@@ -80,8 +80,8 @@
         <div>
           <p class="lede">Three levels designed for businesses, non-profit organizations, and startups. Access to directory, training, events, advisory, and the "Chamber Affiliate" seal.</p>
           <div class="hero-actions">
-            <a class="cta-btn cta-btn-primary" href="#apply">Apply for membership <span class="arrow">→</span></a>
-            <a class="cta-btn cta-btn-ghost" href="#comparison">Compare levels</a>
+            <a class="cta-button cta-button-primary" href="#apply">Apply for membership <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="cta-button cta-button-ghost" href="#comparison">Compare levels</a>
           </div>
         </div>
       </div>
@@ -115,27 +115,27 @@
           </div>
           <ul class="perks">
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Directory listing</strong> with NGO tag and website link.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Monthly newsletter</strong> print and digital.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Open training</strong> sessions (4 workshops per year).</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Advisory voice</strong> in assemblies (no vote).</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Volunteer call</strong> publication.</span>
             </li>
           </ul>
-          <a class="cta-btn cta-btn-ghost" href="#apply">Apply for social rate <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost" href="#apply">Apply for social rate <span class="arrow" aria-hidden="true">→</span></a>
         </article>
 
         <!-- Silver tier -->
@@ -151,31 +151,31 @@
           </div>
           <ul class="perks">
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Featured listing</strong> in directory with photo and extended description.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Monthly newsletter</strong> + 1 mention per year.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Unlimited training</strong> + 2 premium courses per year.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>2 seats</strong> at bimonthly trade luncheons.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Basic legal and tax advisory</strong> (4 consultations/year).</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Assembly vote</strong> and discounts from affiliated suppliers.</span>
             </li>
           </ul>
-          <a class="cta-btn cta-btn-ghost" href="#apply">Apply for Silver <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost" href="#apply">Apply for Silver <span class="arrow" aria-hidden="true">→</span></a>
         </article>
 
         <!-- Gold tier -->
@@ -192,42 +192,42 @@
           </div>
           <ul class="perks">
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Full profile</strong> in directory + rotating spotlight on homepage.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>4 publications</strong> per year in newsletter + annual interview.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Unlimited premium training</strong> + 1 trade mission per year.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Social media features</strong> on Chamber channels: 6 sponsored posts/year.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>5 seats</strong> at trade luncheons and institutional events.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Sponsorships</strong>: priority and discount at Chamber events.</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2"><path d="M3 8l3.5 3.5L13 4"/></svg>
               <span><strong>Unlimited legal and tax advisory</strong> + investment support.</span>
             </li>
           </ul>
-          <a class="cta-btn cta-btn-primary" href="#apply">Apply for Gold <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-primary" href="#apply">Apply for Gold <span class="arrow" aria-hidden="true">→</span></a>
         </article>
       </div>
     </div>
   </section>
 
   <!-- Comparison table -->
-  <section class="section bg-cream" id="comparison">
+  <section class="section section-cream" id="comparison">
     <div class="wrapper">
       <div class="sec-head">
         <div>
@@ -255,21 +255,21 @@
             </tr>
             <tr>
               <td>Homepage spotlight</td>
-              <td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="check">✓</span></td>
+              <td><span class="cross" aria-label="Not included">—</span></td><td><span class="cross" aria-label="Not included">—</span></td><td><span class="check" aria-label="Included">✓</span></td>
             </tr>
             <tr>
               <td>Social media features</td>
-              <td><span class="cross">—</span></td><td>1 post/year</td><td>6 posts/year</td>
+              <td><span class="cross" aria-label="Not included">—</span></td><td>1 post/year</td><td>6 posts/year</td>
             </tr>
             <tr>
               <td>"Chamber Affiliate" seal</td>
-              <td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td>
+              <td><span class="check" aria-label="Included">✓</span></td><td><span class="check" aria-label="Included">✓</span></td><td><span class="check" aria-label="Included">✓</span></td>
             </tr>
 
             <tr class="group-row"><td colspan="4">Publications</td></tr>
             <tr>
               <td>Monthly newsletter</td>
-              <td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td>
+              <td><span class="check" aria-label="Included">✓</span></td><td><span class="check" aria-label="Included">✓</span></td><td><span class="check" aria-label="Included">✓</span></td>
             </tr>
             <tr>
               <td>Mentions / publications</td>
@@ -301,7 +301,7 @@
             <tr class="group-row"><td colspan="4">Sponsorships and events</td></tr>
             <tr>
               <td>Chamber event sponsorship</td>
-              <td><span class="cross">—</span></td><td>Available</td><td>Priority + discount</td>
+              <td><span class="cross" aria-label="Not included">—</span></td><td>Available</td><td>Priority + discount</td>
             </tr>
             <tr>
               <td>Booth at Tuy Business Forum</td>
@@ -315,15 +315,15 @@
             </tr>
             <tr>
               <td>Investment support</td>
-              <td>—</td><td>—</td><td><span class="check">✓</span></td>
+              <td>—</td><td>—</td><td><span class="check" aria-label="Included">✓</span></td>
             </tr>
             <tr>
               <td>Assembly vote</td>
-              <td>Advisory voice</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td>
+              <td>Advisory voice</td><td><span class="check" aria-label="Included">✓</span></td><td><span class="check" aria-label="Included">✓</span></td>
             </tr>
             <tr>
               <td>Board of Directors eligibility</td>
-              <td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td>
+              <td><span class="cross" aria-label="Not included">—</span></td><td><span class="check" aria-label="Included">✓</span></td><td><span class="check" aria-label="Included">✓</span></td>
             </tr>
           </tbody>
         </table>
@@ -344,7 +344,7 @@
 
       <div class="application">
         <aside class="application-aside">
-          <div class="stamp">C</div>
+          <div class="stamp" aria-hidden="true">C</div>
           <ul class="aside-info">
             <li><span class="label">Required documents</span>RIF, current commercial registry, legal representative ID.</li>
             <li><span class="label">Payment method</span>Bank transfer, POS, or automatic debit.</li>
@@ -377,18 +377,18 @@
           <div class="field-row">
             <div class="field">
               <label for="razon">Company name</label>
-              <input id="razon" type="text" placeholder="El Tuy Trading Co., C.A." required />
+              <input id="razon" name="company" type="text" autocomplete="organization" placeholder="El Tuy Trading Co., C.A." required />
             </div>
             <div class="field">
               <label for="rif">RIF</label>
-              <input id="rif" type="text" placeholder="J-00000000-0" required />
+              <input id="rif" name="rif" type="text" autocomplete="off" spellcheck="false" placeholder="J-00000000-0" required />
             </div>
           </div>
           <div class="field-row field-row-mt">
             <div class="field">
               <label for="sector">Sector</label>
-              <select id="sector" required>
-                <option value="">Select a sector...</option>
+              <select id="sector" name="sector" required>
+                <option value="">Select a sector…</option>
                 <option>Retail</option>
                 <option>Services</option>
                 <option>Manufacturing</option>
@@ -403,8 +403,8 @@
             </div>
             <div class="field">
               <label for="empleados">Number of employees</label>
-              <select id="empleados" required>
-                <option value="">Select...</option>
+              <select id="empleados" name="employees" required>
+                <option value="">Select…</option>
                 <option>1 – 5</option>
                 <option>6 – 20</option>
                 <option>21 – 50</option>
@@ -416,45 +416,45 @@
           </div>
           <div class="field field-row-mt">
             <label for="direccion">Business address</label>
-            <input id="direccion" type="text" placeholder="Street, building, sector, municipality" required />
+            <input id="direccion" name="address" type="text" autocomplete="street-address" placeholder="Street, building, sector, municipality" required />
           </div>
 
           <div class="form-section-title">3 · Legal representative</div>
           <div class="field-row">
             <div class="field">
               <label for="nombre">Full name</label>
-              <input id="nombre" type="text" placeholder="Maria Perez" required />
+              <input id="nombre" name="name" type="text" autocomplete="name" placeholder="Maria Perez" required />
             </div>
             <div class="field">
               <label for="cargo">Position</label>
-              <input id="cargo" type="text" placeholder="General Manager" required />
+              <input id="cargo" name="position" type="text" autocomplete="organization-title" placeholder="General Manager" required />
             </div>
           </div>
           <div class="field-row field-row-mt">
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="contact@company.com" required />
+              <input id="email" name="email" type="email" autocomplete="email" spellcheck="false" placeholder="contact@company.com" required />
             </div>
             <div class="field">
               <label for="tel">Phone</label>
-              <input id="tel" type="tel" placeholder="+58 412 000 0000" required />
+              <input id="tel" name="phone" type="tel" autocomplete="tel" placeholder="+58 412 000 0000" required />
             </div>
           </div>
 
           <div class="form-section-title">4 · Tell us about your organization</div>
           <div class="field">
             <label for="motivo">What do you expect from membership?</label>
-            <textarea id="motivo" placeholder="Briefly describe your company and what you are looking for by joining..."></textarea>
+            <textarea id="motivo" name="message" placeholder="Briefly describe your company and what you are looking for by joining…"></textarea>
           </div>
 
           <label class="checkbox checkbox-mt">
-            <input type="checkbox" required />
+            <input type="checkbox" name="accept" required />
             <span>I accept the <a href="#" class="link-green">bylaws</a> and the <a href="#" class="link-green">privacy policy</a> of the Chamber.</span>
           </label>
 
           <div class="form-actions">
-            <button type="submit" class="cta-btn cta-btn-primary">Submit application <span class="arrow">→</span></button>
-            <span class="form-status text-faint">Your data is protected under applicable privacy laws.</span>
+            <button type="submit" class="cta-button cta-button-primary">Submit application <span class="arrow" aria-hidden="true">→</span></button>
+            <span class="form-status text-faint" role="status" aria-live="polite">Your data is protected under applicable privacy laws.</span>
           </div>
         </form>
       </div>
@@ -462,7 +462,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section bg-cream">
+  <section class="section section-cream">
     <div class="wrapper">
       <div class="sec-head">
         <div>
@@ -511,9 +511,10 @@
             </span>
           </div>
           <p>Non-profit civil association serving the commerce, industry, and services of the Tuy Valley.</p>
-          <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed';">
-            <input type="email" placeholder="Your email address" required />
+          <form class="newsletter" data-newsletter>
+            <input type="email" name="email" autocomplete="email" spellcheck="false" aria-label="Email address" placeholder="Your email address…" required />
             <button type="submit">Subscribe</button>
+            <span class="sr-only" role="status" aria-live="polite" data-newsletter-status></span>
           </form>
         </div>
         <div>

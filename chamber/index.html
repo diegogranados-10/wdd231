@@ -19,15 +19,16 @@
   <link rel="stylesheet" href="styles/larger.css" />
   <script src="scripts/image-slot.js" defer></script>
   <script src="scripts/script.js" defer></script>
-  <script src="scripts/home.js" defer></script>
+  <script type="module" src="scripts/home.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Utility bar -->
   <div class="utility">
     <div class="wrapper">
       <div class="util-left">
-        <span><span class="live-dot"></span>Session open</span>
+        <span><span class="live-dot" aria-hidden="true"></span>Session open</span>
         <span data-live-date>—</span>
       </div>
       <div class="util-right">
@@ -49,21 +50,21 @@
           </span>
         </a>
         <ul class="nav-links" id="primary-nav">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
           <li><a href="discover.html">Discover</a></li>
           <li><a href="directory.html">Directory</a></li>
           <li><a href="join.html">Join</a></li>
         </ul>
         <div class="nav-cta">
-          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="join.html">Sign in</a>
-          <a class="cta-btn cta-btn-primary cta-btn-sm" href="join.html#apply">Join <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost cta-button-sm" href="join.html">Sign In</a>
+          <a class="cta-button cta-button-primary cta-button-sm" href="join.html#apply">Join <span class="arrow" aria-hidden="true">→</span></a>
           <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
         </div>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
   <!-- Hero -->
   <section class="hero">
@@ -76,8 +77,8 @@
             <span class="alt">Tuy Valley</span><br />meets.
           </h1>
           <div class="hero-actions">
-            <a class="cta-btn cta-btn-primary" href="join.html#apply">Apply for membership <span class="arrow">→</span></a>
-            <a class="cta-btn cta-btn-ghost" href="directory.html">Explore directory</a>
+            <a class="cta-button cta-button-primary" href="join.html#apply">Apply for membership <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="cta-button cta-button-ghost" href="directory.html">Explore directory</a>
           </div>
           <div class="hero-meta">
             <div class="stat"><span class="num">387</span><span class="label">Affiliated businesses</span></div>
@@ -87,7 +88,7 @@
         </div>
         <div class="hero-image">
           <span class="photo-badge">Plaza Bolivar · Santa Teresa</span>
-          <img src="images/Santateresahannes.webp" alt="Downtown Santa Teresa del Tuy view" loading="lazy">
+          <img src="images/santateresahannes.webp" alt="Downtown Santa Teresa del Tuy view" width="800" height="600" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -108,7 +109,7 @@
         <article class="today-card weather">
           <div class="today-head">
             <span class="eyebrow no-rule">Today in Tuy</span>
-            <span class="today-time" data-live-clock>—</span>
+            <span class="today-time" data-live-clock aria-hidden="true">—</span>
           </div>
           <div class="weather-main">
             <div class="weather-temp">
@@ -133,7 +134,7 @@
               </svg>
             </div>
           </div>
-          <p class="weather-desc" id="w-desc">Loading weather...</p>
+          <p class="weather-desc" id="w-desc" aria-live="polite">Loading weather…</p>
           <ul class="weather-strip">
             <li><span class="lbl">Humidity</span><span class="val" id="w-humidity">--%</span></li>
             <li><span class="lbl">Wind</span><span class="val" id="w-wind">-- km/h</span></li>
@@ -151,25 +152,25 @@
           <h2 class="pulse-title">Downtown businesses open normally this week.</h2>
           <ul class="pulse-list">
             <li>
-              <span class="dot pulse-dot-green"></span>
+              <span class="dot pulse-dot-green" aria-hidden="true"></span>
               <div>
                 <strong>Traffic ordinance:</strong> Calle Sucre open for loading/unloading 6:00–9:00 AM through May 30.
               </div>
             </li>
             <li>
-              <span class="dot pulse-dot-amber"></span>
+              <span class="dot pulse-dot-amber" aria-hidden="true"></span>
               <div>
                 <strong>Municipal market:</strong> new Saturday hours 5:00 AM–2:00 PM.
               </div>
             </li>
             <li>
-              <span class="dot pulse-dot-faint"></span>
+              <span class="dot pulse-dot-faint" aria-hidden="true"></span>
               <div>
                 <strong>SENIAT:</strong> monthly income tax filing due May 15.
               </div>
             </li>
           </ul>
-          <a class="pulse-link" href="discover.html">Explore Santa Teresa <span class="arrow">→</span></a>
+          <a class="pulse-link" href="discover.html">Explore Santa Teresa <span class="arrow" aria-hidden="true">→</span></a>
         </article>
 
         <article class="today-card spotlight">
@@ -207,7 +208,7 @@
             </div>
           </div>
           <div class="mission-cta">
-            <a class="cta-btn cta-btn-ghost" href="discover.html">Discover Santa Teresa <span class="arrow">→</span></a>
+            <a class="cta-button cta-button-ghost" href="discover.html">Discover Santa Teresa <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="split-img">
@@ -226,7 +227,7 @@
           <span class="desc">Active affiliates across six Tuy municipalities.</span>
         </div>
         <div class="stat-cell">
-          <span class="num">$ 18<span class="unit">M</span></span>
+          <span class="num">$&nbsp;18<span class="unit">M</span></span>
           <span class="desc">Generated in business roundtables during 2025.</span>
         </div>
         <div class="stat-cell">
@@ -242,7 +243,7 @@
   </section>
 
   <!-- Member Spotlights (dynamically loaded gold/silver members) -->
-  <section class="section bg-cream">
+  <section class="section section-cream">
     <div class="wrapper">
       <div class="sec-head">
         <div>
@@ -250,11 +251,11 @@
           <h2 class="section-title-mt">Featured gold &amp; silver members.</h2>
         </div>
         <div class="right">
-          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="directory.html">View all <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost cta-button-sm" href="directory.html">View all <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
 
-      <div class="dir-grid" id="spotlights">
+      <div class="dir-grid" id="spotlights" aria-live="polite">
         <!-- Populated by home.js -->
       </div>
     </div>
@@ -269,7 +270,7 @@
           <h2 class="section-title-mt">Events calendar.</h2>
         </div>
         <div class="right">
-          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="discover.html#events">View full schedule <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost cta-button-sm" href="discover.html#events">View full schedule <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
 
@@ -292,7 +293,7 @@
               <span>Limited to 240 attendees</span>
             </div>
           </div>
-          <span class="event-arrow">→</span>
+          <span class="event-arrow" aria-hidden="true">→</span>
         </article>
 
         <article class="event-row">
@@ -313,7 +314,7 @@
               <span>Free for members</span>
             </div>
           </div>
-          <span class="event-arrow">→</span>
+          <span class="event-arrow" aria-hidden="true">→</span>
         </article>
 
         <article class="event-row">
@@ -333,14 +334,14 @@
               <span>40 spots · pre-registration required</span>
             </div>
           </div>
-          <span class="event-arrow">→</span>
+          <span class="event-arrow" aria-hidden="true">→</span>
         </article>
       </div>
     </div>
   </section>
 
   <!-- News -->
-  <section class="section bg-cream">
+  <section class="section section-cream">
     <div class="wrapper">
       <div class="sec-head">
         <div>
@@ -348,7 +349,7 @@
           <h2 class="section-title-mt">Latest from the Valley.</h2>
         </div>
         <div class="right">
-          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="#">Full archive <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost cta-button-sm" href="#">Full archive <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
 
@@ -387,8 +388,8 @@
           <h2 class="section-title-mt">Your business belongs to something bigger.</h2>
           <p class="lede section-lede-mt">Join the most active business network in the Tuy Valley. Access to events, legal advisory, business roundtables, and discounts on affiliated services.</p>
           <div class="actions section-actions-mt">
-            <a class="cta-btn cta-btn-amber" href="join.html#apply">Start membership <span class="arrow">→</span></a>
-            <a class="cta-btn cta-btn-ghost" href="join.html#benefits">Learn about benefits</a>
+            <a class="cta-button cta-button-amber" href="join.html#apply">Start membership <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="cta-button cta-button-ghost" href="join.html#benefits">Learn about benefits</a>
           </div>
         </div>
         <div>
@@ -418,9 +419,10 @@
             </span>
           </div>
           <p>Non-profit civil association serving the commerce, industry, and services of the Tuy Valley.</p>
-          <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed';">
-            <input type="email" placeholder="Your email address" required />
+          <form class="newsletter" data-newsletter>
+            <input type="email" name="email" autocomplete="email" spellcheck="false" aria-label="Email address" placeholder="Your email address…" required />
             <button type="submit">Subscribe</button>
+            <span class="sr-only" role="status" aria-live="polite" data-newsletter-status></span>
           </form>
         </div>
         <div>

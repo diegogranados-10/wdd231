@@ -20,17 +20,17 @@
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/larger.css" />
-  <script src="scripts/image-slot.js" defer></script>
   <script src="scripts/script.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
+  <script type="module" src="scripts/directory.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Utility bar -->
   <div class="utility">
     <div class="wrapper">
       <div class="util-left">
-        <span><span class="live-dot"></span>Session open</span>
+        <span><span class="live-dot" aria-hidden="true"></span>Session open</span>
         <span data-live-date>—</span>
       </div>
       <div class="util-right">
@@ -54,19 +54,19 @@
         <ul class="nav-links" id="primary-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="discover.html">Discover</a></li>
-          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
           <li><a href="join.html">Join</a></li>
         </ul>
         <div class="nav-cta">
-          <a class="cta-btn cta-btn-ghost cta-btn-sm" href="join.html">Sign in</a>
-          <a class="cta-btn cta-btn-primary cta-btn-sm" href="join.html#apply">Join <span class="arrow">→</span></a>
+          <a class="cta-button cta-button-ghost cta-button-sm" href="join.html">Sign In</a>
+          <a class="cta-button cta-button-primary cta-button-sm" href="join.html#apply">Join <span class="arrow" aria-hidden="true">→</span></a>
           <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
         </div>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
   <!-- Page hero -->
   <section class="page-hero">
@@ -96,8 +96,8 @@
     <div class="wrapper">
       <div class="directory-toolbar">
         <div class="view-toggle">
-          <button id="toggle-grid" class="active" aria-label="Grid view">Grid</button>
-          <button id="toggle-list" aria-label="List view">List</button>
+          <button id="toggle-grid" type="button" class="active" aria-pressed="true">Grid</button>
+          <button id="toggle-list" type="button" aria-pressed="false">List</button>
         </div>
       </div>
     </div>
@@ -106,8 +106,8 @@
   <!-- Directory grid (populated by JS from members.json) -->
   <section class="section">
     <div class="wrapper">
-      <div id="directory-cards" class="dir-grid full">
-        <p class="text-soft">Loading directory...</p>
+      <div id="directory-cards" class="dir-grid full" aria-live="polite">
+        <p class="text-soft">Loading directory…</p>
       </div>
     </div>
   </section>
@@ -121,8 +121,8 @@
           <h2 class="section-title-mt">Join the Tuy directory.</h2>
           <p class="lede section-lede-mt">The public directory is one of the most visible benefits of membership. Listing, full profile, and links to your website and social media.</p>
           <div class="actions section-actions-mt">
-            <a class="cta-btn cta-btn-amber" href="join.html#apply">Apply for membership <span class="arrow">→</span></a>
-            <a class="cta-btn cta-btn-ghost" href="join.html#benefits">Compare benefits</a>
+            <a class="cta-button cta-button-amber" href="join.html#apply">Apply for membership <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="cta-button cta-button-ghost" href="join.html#benefits">Compare benefits</a>
           </div>
         </div>
         <div>
@@ -152,9 +152,10 @@
             </span>
           </div>
           <p>Non-profit civil association serving the commerce, industry, and services of the Tuy Valley.</p>
-          <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed';">
-            <input type="email" placeholder="Your email address" required />
+          <form class="newsletter" data-newsletter>
+            <input type="email" name="email" autocomplete="email" spellcheck="false" aria-label="Email address" placeholder="Your email address…" required />
             <button type="submit">Subscribe</button>
+            <span class="sr-only" role="status" aria-live="polite" data-newsletter-status></span>
           </form>
         </div>
         <div>
